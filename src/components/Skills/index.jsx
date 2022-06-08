@@ -53,7 +53,7 @@ export default function Skills () {
               </Ul>
             </section>
             <section>
-              <h5>Frameworks <br /> / <br /> Librerias</h5>
+              <h5>Frameworks <br /> / <br /> Libraries</h5>
 
               <Ul>
                 <li> <DiReact color='white' />React</li>
@@ -113,7 +113,7 @@ export default function Skills () {
             </section>
 
             <section>
-              <h5>Librerias</h5>
+              <h5>Libraries</h5>
               <Ul>
                 <li><IoLogoNodejs />Truffle</li>
 
