@@ -16,7 +16,6 @@ export const typingAnimation = ({ timeType = '1s', ch = 4 } = {}) => css`
     ${blinkKeyframes} .5s infinite step-end alternate;
 `
 
-
 const shadowKeyframes = keyframes`
   50%{
     box-shadow: 0px 2px 5px -8px #05445E;
