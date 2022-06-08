@@ -15,9 +15,9 @@ export const AnimationText = styled.span`
   margin: 0 auto;
   white-space: nowrap;
   border-right:  4px solid white;
-  width: 6ch;
+  width: 7ch;
   overflow: hidden;
-  ${typingAnimation({ timeType: '1s', ch: 6 })}
+  ${typingAnimation({ timeType: '1s', ch: 7 })}
 `
 export const TextBox = styled.div`
   display: grid;
