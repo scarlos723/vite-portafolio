@@ -20,7 +20,8 @@ export const Card = styled.div`
   align-items: center;
   h3{
     margin: 20px 0;
-    box-shadow: 0px 4px 10px 0px #05445E;
+    
+    box-shadow: 0px 8px 20px -8px #05445E;
     border-radius: 2px;
   }
   ${ResponsiveTo('md')}{
@@ -43,7 +44,7 @@ export const Box = styled.div`
   border-radius: 18px;
   padding: 20px 4px;
   gap: 12px;
-  box-shadow: 0px -4px 10px 0px #05445E;
+  box-shadow: 0px -10px 20px -6px #05445E;
   h5{
     font-family: 'Monument Extended';
     color:  #75E6DA;

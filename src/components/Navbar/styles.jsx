@@ -56,6 +56,7 @@ export const Ul = styled.ul`
 
   ${ResponsiveTo('md')}{
     justify-content: center;
+    box-shadow: 0px 8px 20px -8px #05445E;
     li{
       width: 200px;
       p{
