@@ -9,7 +9,8 @@ import {
 } from 'react-icons/im'
 import {
   IoLogoSass,
-  IoLogoPython
+  IoLogoPython,
+  IoLogoNodejs
 } from 'react-icons/io'
 import {
   SiJavascript,
@@ -20,7 +21,8 @@ import {
   SiSqlite,
   SiTailwindcss,
   SiNextdotjs,
-  SiVite
+  SiVite,
+  SiSolidity
 } from 'react-icons/si'
 import {
   FaPhp
@@ -85,7 +87,6 @@ export default function Skills () {
               <Ul>
                 <li><SiLaravel />Laravel</li>
                 <li><SiDjango />Django</li>
-                <li><SiPostgresql />PostgreSQL</li>
                 <li><GrNode />Express</li>
               </Ul>
             </section>
@@ -98,6 +99,27 @@ export default function Skills () {
                 <li><SiSqlite />SQLite3</li>
               </Ul>
             </section>
+          </Box>
+        </Card>
+        <Card>
+          <h3>Web 3.0</h3>
+
+          <Box>
+            <section>
+              <h5>Languages</h5>
+              <Ul>
+                <li><SiSolidity /> Solidity </li>
+              </Ul>
+            </section>
+
+            <section>
+              <h5>Librerias</h5>
+              <Ul>
+                <li><IoLogoNodejs />Truffle</li>
+
+              </Ul>
+            </section>
+
           </Box>
         </Card>
       </Grid>
