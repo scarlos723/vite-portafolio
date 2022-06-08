@@ -6,7 +6,6 @@ export default function Education () {
   return (
     <Container>
       <section>
-
         <Card >
           <GiBookshelf color='white' />
           <h2>Academia </h2>
@@ -18,7 +17,6 @@ export default function Education () {
         </Card>
       </section>
       <section>
-
         <Card>
           <HiStatusOnline color='white' />
           <h2>Cursos y Certificados</h2>

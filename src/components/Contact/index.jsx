@@ -6,7 +6,7 @@ export default function Contact () {
   return (
     <Container>
       <section>
-        <h2>Quieres saludarme?</h2>
+        <h2>¿Quieres saludarme?</h2>
         <p>Puedes escribirmme - <a href="mailto:elcorreoquequieres@correo.com">carlossde58@gmail.com</a></p>
         <p> <SiWhatsapp /> Whatsapp - 3205105983</p>
       </section>

@@ -4,11 +4,10 @@ import { AnimationText, Container, TextBox } from './styles'
 export const Introduction = () => {
   return (
     <Container>
-
       <div>
         <h1>
           <AnimationText>
-            Hola!
+          ¡Hola!
           </AnimationText>
           <br />
           Yo soy Carlos Sánchez.
