@@ -4,6 +4,9 @@ const typingKeyframes = keyframes`
 from{
   width: 0;
 }
+to{
+  width: 7ch;
+}
 `
 const blinkKeyframes = keyframes`
   50%{
