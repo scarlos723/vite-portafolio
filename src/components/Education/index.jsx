@@ -27,7 +27,7 @@ export default function Education () {
             <p>Harvard - <a href='https://courses.edx.org/certificates/b3cff4fa6a514ea5b6e609b526ad66eb'>Web Development with Python and JavaScript</a> </p>
             <p>Harvard - <a href='https://courses.edx.org/certificates/97150a4aec6146cba244943849213339'>Introduction to Artificial Intelligence whit Python</a> </p>
             <p>Blockchain Academy Chile - <a href="https://registrado.org/visor/?c5576b22fbb43303d5e0c7edd39ca44dd097c036">Desarrollo de contratos inteligentes con Solidity</a></p>
-            <p>Platzi - <a href="https://platzi.com/p/carlossde58/">Cursos de desarrollo WEB y a fines</a> </p>
+            <p>Platzi - <a href="https://platzi.com/p/carlossde58/">Cursos de desarrollo WEB y relacionados</a> </p>
           </div>
         </Card>
       </section>
