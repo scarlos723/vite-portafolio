@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { ResponsiveTo } from '../../hooks/useResponsive'
+import { shadowAnimation } from '../../styles/Animations'
 
 export const NavContainer = styled.div`
   position: absolute;
@@ -57,6 +58,7 @@ export const Ul = styled.ul`
   ${ResponsiveTo('md')}{
     justify-content: center;
     box-shadow: 0px 8px 20px -8px #05445E;
+    ${shadowAnimation({ time: '2s', type: 'ease' })}
     li{
       width: 200px;
       p{

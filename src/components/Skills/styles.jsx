@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { ResponsiveTo } from '../../hooks/useResponsive'
+import { shadowAnimation } from '../../styles/Animations'
 import { ContainerGlobal } from '../../styles/styles'
 
 export const Container = styled(ContainerGlobal)`
@@ -23,6 +24,7 @@ export const Card = styled.div`
     
     box-shadow: 0px 8px 20px -8px #05445E;
     border-radius: 2px;
+    ${shadowAnimation({ time: '2s', type: 'ease' })}
   }
   ${ResponsiveTo('md')}{
     h3{
@@ -45,6 +47,7 @@ export const Box = styled.div`
   padding: 20px 4px;
   gap: 12px;
   box-shadow: 0px -10px 20px -6px #05445E;
+  ${shadowAnimation({ time: '2s', type: 'ease' })}
   h5{
     font-family: 'Monument Extended';
     color:  #75E6DA;
