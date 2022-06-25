@@ -1,12 +1,18 @@
 import styled, { css } from 'styled-components'
+import { ResponsiveTo } from '../../hooks/useResponsive'
 import { ContainerGlobal } from '../../styles/styles'
 
 export const Container = styled(ContainerGlobal)`
   display: grid;
   width: 90%;
   margin: 80px auto;
-  gap: 32px;
-  
+  gap: 50px;
+  ${ResponsiveTo('md')}{
+    gap:80px
+  }
+  ${ResponsiveTo('lg')}{
+    gap:100px
+  }
 `
 export const Section = styled.section`
   display: grid;
@@ -21,10 +27,11 @@ export const TextBox = styled.div`
     }
   }
   .text-img{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 12px;
     img{
+      order: 1;
       width: 100%;
       border-radius: 20px;
       box-shadow: 0px 0px 15px #189AB4;
@@ -60,5 +67,16 @@ export const TextBox = styled.div`
 
     `
     : ''}
+  }
+
+  ${ResponsiveTo('lg')}{
+    .text-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    img{
+      order: inherit;
+    }
+    }
   }
 `
