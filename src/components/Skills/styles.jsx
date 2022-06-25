@@ -41,13 +41,14 @@ export const Box = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  border: 1px solid #75E6DA;
+  //border: 1px solid #75E6DA;
+  box-shadow: 0px 0px 15px #05445E;
   box-sizing: border-box;
   border-radius: 18px;
   padding: 20px 4px;
   gap: 12px;
-  box-shadow: 0px -10px 20px -6px #05445E;
-  ${shadowAnimation({ time: '2s', type: 'ease' })}
+  //box-shadow: 0px -10px 20px -6px #05445E;
+  
   h5{
     font-family: 'Monument Extended';
     color:  #75E6DA;

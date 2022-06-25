@@ -35,10 +35,10 @@ export const NavContainer = styled.div`
 export const Ul = styled.ul`
   width: 100%;
   display: grid;
-  width: 0;
-  height: 0;
+  transform: scale(0);
+  opacity: 0;
   overflow: hidden;
-  transition: all 0.3s;
+  transition: all 0.5s;
   li{
     display: flex;
     align-items: center;
@@ -50,8 +50,8 @@ export const Ul = styled.ul`
   }
   ${props => props.show
     ? css`
-    width: auto;
-    height: auto;
+    transform: scale(1);
+    opacity: 1;
   `
     : ''}
 
