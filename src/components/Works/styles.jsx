@@ -15,6 +15,26 @@ export const Section = styled.section`
 export const TextBox = styled.div`
   display: grid;
   gap: 12px;
+  p{
+    a{
+      color: #189AB4;
+    }
+  }
+  .text-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    img{
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0px 0px 15px #189AB4;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover{
+        transform: scale(1.05);
+      }
+    }
+  }
   .text-action{
     display: flex;
     gap: 4px;
@@ -40,13 +60,5 @@ export const TextBox = styled.div`
 
     `
     : ''}
-  }
-`
-
-export const VideoContainer = styled.div`
-  width: 100%;
-  margin: 20px 0;
-  video{
-    width: 100%;
   }
 `
