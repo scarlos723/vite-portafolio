@@ -10,3 +10,13 @@ export const ContainerGlobal = styled.div`
     max-width: 800px;
   }
 `
+export const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  div{
+    transition: all 0.3s ease;
+  }
+`
