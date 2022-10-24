@@ -102,26 +102,26 @@ function App () {
   const refWorks = React.useRef(null)
   const refEdu = React.useRef(null)
   const refContact = React.useRef(null)
-  let scrolly = 0
+  const scrolly = 0
 
-  window.addEventListener('wheel', (e) => {
-    scrolly += e.deltaY
-    if (e.deltaY > 0) {
-      scrolly = 0
-    }
-    console.log(scrolly)
-    if (scrolly <= 0) {
-      try {
-        refIntro.current.style.transform = `translateY(${scrolly}px)`
-        refSkills.current.style.transform = `translateY(${scrolly}px)`
-        refWorks.current.style.transform = `translateY(${scrolly}px)`
-        refEdu.current.style.transform = `translateY(${scrolly}px)`
-        refContact.current.style.transform = `translateY(${scrolly}px)`
-      } catch (error) {
-        console.log('ref not found')
-      }
-    }
-  })
+  // window.addEventListener('wheel', (e) => {
+  //   scrolly += e.deltaY
+  //   if (e.deltaY > 0) {
+  //     scrolly = 0
+  //   }
+  //   console.log(scrolly)
+  //   if (scrolly <= 0) {
+  //     try {
+  //       refIntro.current.style.transform = `translateY(${scrolly}px)`
+  //       refSkills.current.style.transform = `translateY(${scrolly}px)`
+  //       refWorks.current.style.transform = `translateY(${scrolly}px)`
+  //       refEdu.current.style.transform = `translateY(${scrolly}px)`
+  //       refContact.current.style.transform = `translateY(${scrolly}px)`
+  //     } catch (error) {
+  //       console.log('ref not found')
+  //     }
+  //   }
+  // })
   return (
     <div >
       <div>
