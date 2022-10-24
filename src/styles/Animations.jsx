@@ -5,7 +5,7 @@ from{
   width: 0;
 }
 to{
-  width: 7ch;
+  width: 8ch;
 }
 `
 const blinkKeyframes = keyframes`

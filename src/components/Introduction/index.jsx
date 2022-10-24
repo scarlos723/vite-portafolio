@@ -16,12 +16,12 @@ export const Introduction = () => {
           <p>
             Soy un desarrollador de páginas WEB quien actualmente trabaja como desarrollador
             Frontend en una compañía de servicios tecnológicos.
-            También me encuentro finalizando mi carrera de ingeniería electrónica en la Universidad del Cauca.
+            Soy egresado de la Universidad del Cauca con título de ingeniero en electrónica y telecomunicaciones.
           </p>
           <p>
             Me motiva el aprendizaje constante y los retos, por esto trato de usar herramientas
             modernas para la creación y despliegue de aplicaciones WEB
-            o proyectos relacionados para la comunidad que se encuentra interesada en mi trabajo.
+            o proyectos relacionados.
           </p>
           <p>
             Bienvenido a mi portafolio, aquí podrás encontrar información

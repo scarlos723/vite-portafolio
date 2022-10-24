@@ -91,7 +91,7 @@ export default function Works () {
 
             <div>
               <p>
-              Requi es un producto que apenas se está creando y actualmente se encuentra en fase de desarrollo.
+              Retri es un producto que apenas se está creando y actualmente se encuentra en fase de desarrollo.
               El website en fase de desarrollo contiene la información de lo que será un Web App que va a
               revolucionar el alquiler de maquinaria pesada.
               </p>
