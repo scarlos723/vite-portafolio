@@ -8,6 +8,9 @@ export default function Works () {
   const [showFilmcoin, setShowFilmcoin] = React.useState(false)
   const [showTFTT, setShowTFTT] = React.useState(false)
   const [showRequi, setShowRequi] = React.useState(false)
+  function goTo (url) {
+    window.open(url)
+  }
   return (
     <Container>
       <h2>Trabajos realizados</h2>
@@ -39,7 +42,7 @@ export default function Works () {
                 </p>
               </div>
             </div>
-            <img src={filmcoinImg} alt="" />
+            <img onClick={() => goTo('https://thefilmcoin.io/')} src={filmcoinImg} alt="" />
           </section>
 
           <p>Puedes echar un vistazo al sitio WEB desde <a href="https://thefilmcoin.io/">aquí</a></p>
@@ -52,7 +55,7 @@ export default function Works () {
         <h3 style={{ textAlign: 'right' }}>TALES FROM THE TRAP</h3>
         <TextBox show={showTFTT}>
           <section className='text-img'>
-            <img src={tfttImg} alt="" />
+            <img onClick={() => goTo('https://talesfromthetrap.com/')} src={tfttImg} alt="" />
             <div>
 
               <p>
@@ -100,8 +103,8 @@ export default function Works () {
                 </p>
               </div>
             </div>
-            <img src={retriImg} alt="" />
-            <p>Puedes echar un vistazo al sitio WEB desde <a href="https://www.retri.com.co/">aquí</a></p>
+            <img onClick={() => goTo('https://www.retri.app/')} src={retriImg} alt="" />
+            <p>Puedes echar un vistazo al sitio WEB desde <a href="https://www.retri.app/">aquí</a></p>
           </section>
 
         </TextBox>

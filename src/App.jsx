@@ -102,7 +102,7 @@ function App () {
   const refWorks = React.useRef(null)
   const refEdu = React.useRef(null)
   const refContact = React.useRef(null)
-  const scrolly = 0
+  // const scrolly = 0
 
   // window.addEventListener('wheel', (e) => {
   //   scrolly += e.deltaY
