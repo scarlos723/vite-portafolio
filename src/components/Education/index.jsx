@@ -1,4 +1,3 @@
-import React from 'react'
 import { GiBookshelf } from 'react-icons/gi'
 import { HiStatusOnline } from 'react-icons/hi'
 import { Card, Container } from './styles'

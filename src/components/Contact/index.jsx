@@ -1,4 +1,3 @@
-import React from 'react'
 import { SiWhatsapp } from 'react-icons/si'
 import { Container } from './styles'
 
@@ -13,7 +12,6 @@ export default function Contact () {
       <section>
         <p>Designed and developed by Carlos Sanchez</p>
       </section>
-
     </Container>
   )
 }

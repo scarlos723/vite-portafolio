@@ -1,9 +1,26 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 import { AnimationText, Container, TextBox } from './styles'
-
+import { getInfo } from '../../services/api'
 export const Introduction = () => {
+  const [data, setData] = useState([])
+  async function getData () {
+    try {
+      const response = await getInfo()
+      if (response) {
+        setData(response)
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  useEffect(() => {
+    getData()
+  }, [])
   return (
     <Container>
+      <h2>
+        { data.text }
+      </h2>
       <div>
         <h1>
           <AnimationText>
