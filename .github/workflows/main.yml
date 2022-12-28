@@ -25,6 +25,8 @@ jobs:
       - name: Install and Build
         run: |
           npm i
+          echo "VITE_API_URL=http://localhost:3002" >> .env
+          echo "VITE_DOMAIN=http://testdomain.io" >> .env
           npm run build
 
       - name: Configure AWS Credentials

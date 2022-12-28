@@ -3,6 +3,8 @@ import { AnimationText, Container, TextBox } from './styles'
 import { getInfo } from '../../services/api'
 export const Introduction = () => {
   const [data, setData] = useState([])
+  const API_BASE_URL = import.meta.env.VITE_API_URL
+  const DOMAIN = import.meta.env.VITE_DOMAIN
   async function getData () {
     try {
       const response = await getInfo()
@@ -21,6 +23,8 @@ export const Introduction = () => {
       <h2>
         { data.text }
       </h2>
+      <p> BASE URL ENV {API_BASE_URL}</p>
+      <p>Domain {DOMAIN}</p>
       <div>
         <h1>
           <AnimationText>
