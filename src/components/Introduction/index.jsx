@@ -28,7 +28,7 @@ export const Introduction = () => {
       <div>
         <h1>
           <AnimationText>
-          ¡Hola que tal!
+          ¡Hola!
           </AnimationText>
           <br />
           Yo soy Carlos Sánchez.
