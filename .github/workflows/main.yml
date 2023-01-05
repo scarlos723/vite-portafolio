@@ -50,7 +50,7 @@ jobs:
         run: |
           docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
           docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
-          echo "::set-env name=image::$REGISTRY/$REPOSITORY:$IMAGE_TAG"
+          echo "::set-env name=IMAGE_URL::$REGISTRY/$REPOSITORY:$IMAGE_TAG"
 
       #push the image id in th AWS ECS task definition
       - name: Fill in the new image ID in the Amazon ECS task definition
