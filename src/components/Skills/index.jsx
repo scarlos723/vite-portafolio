@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Card, Container, Title, Ul, Grid } from './styles'
+import { Container, ExpandSection, MiniCard } from './styles'
 
 // Icons
 
@@ -35,27 +35,33 @@ import { DiMaterializecss, DiReact } from 'react-icons/di'
 export default function Skills () {
   return (
     <Container>
-      <Title>
-        Habilidades
-      </Title>
-      <Grid>
+      <MiniCard>
+        <h2>
+          Habilidades
+        </h2>
+        <div>
+          <DiReact color='#04061F' />
+        </div>
+      </MiniCard>
 
-        <Card>
+      <ExpandSection>
+
+        <article>
           <h3>FrontEnd</h3>
-          <Box>
+          <div>
             <section>
-              <h5>Languages</h5>
-              <Ul>
+              <h4>Languages</h4>
+              <ul>
                 <li> <ImHtmlFive2 color='white' /> HTML </li>
                 <li> <SiJavascript color='white' />JavaScript </li>
                 <li> <ImCss3 color='white' />CSS </li>
                 <li> <IoLogoSass color='white' /> Sass</li>
-              </Ul>
+              </ul>
             </section>
             <section>
-              <h5>Frameworks <br /> / <br /> Libraries</h5>
+              <hh4>Frameworks <br /> / <br /> Libraries</hh4>
 
-              <Ul>
+              <ul>
                 <li> <DiReact color='white' />React</li>
                 <li> <SiNextdotjs color='white' />Next</li>
                 <li> <SiVite color='white' />Vite</li>
@@ -64,65 +70,65 @@ export default function Skills () {
                 <li><SiBootstrap color='white' />Bootstrap</li>
                 <li><SiTailwindcss color='white' />Tailwind</li>
 
-              </Ul>
+              </ul>
             </section>
 
-          </Box>
-        </Card>
-        <Card>
+          </div>
+        </article>
+        <article>
           <h3>Backend</h3>
 
-          <Box>
+          <div>
             <section>
               <h5>Languages</h5>
-              <Ul>
+              <ul>
                 <li><IoLogoPython /> Python </li>
                 <li> <SiJavascript color='white' />JavaScript </li>
                 <li> <FaPhp /> PHP </li>
-              </Ul>
+              </ul>
             </section>
 
             <section>
               <h5>Frameworks</h5>
-              <Ul>
+              <ul>
                 <li><SiLaravel />Laravel</li>
                 <li><SiDjango />Django</li>
                 <li><GrNode />Express</li>
-              </Ul>
+              </ul>
             </section>
 
             <section>
               <h5>Databases</h5>
-              <Ul>
+              <ul>
                 <li><GrMysql />MySQL</li>
                 <li><SiPostgresql />PostgreSQL</li>
                 <li><SiSqlite />SQLite3</li>
-              </Ul>
+              </ul>
             </section>
-          </Box>
-        </Card>
-        <Card>
+          </div>
+        </article>
+        <article>
           <h3>Web 3.0</h3>
 
-          <Box>
+          <div>
             <section>
               <h5>Languages</h5>
-              <Ul>
+              <ul>
                 <li><SiSolidity /> Solidity </li>
-              </Ul>
+              </ul>
             </section>
 
             <section>
               <h5>Libraries</h5>
-              <Ul>
+              <ul>
                 <li><IoLogoNodejs />Truffle</li>
 
-              </Ul>
+              </ul>
             </section>
 
-          </Box>
-        </Card>
-      </Grid>
+          </div>
+        </article>
+      </ExpandSection>
     </Container>
   )
 }
