@@ -11,7 +11,6 @@ export const Introduction = () => {
   useEffect(() => {
     const typing = setInterval(() => {
       if (i < textContent.length - 1) {
-        console.log(textContent[i], i)
         setText(prevText => prevText + textContent[i])
         i++
       } else {
@@ -27,19 +26,26 @@ export const Introduction = () => {
     }, 400)
     return () => clearInterval(cursorBlink)
   }, [])
-  return (
-    <Container>
-      <h1>
-        ¡HOLA!
-      </h1>
 
+  const HELLO_TEXT = '¡HOLA!'
+  return (
+    <Container >
+      <h1>
+        {
+          HELLO_TEXT.split('').map((letter, index) => (
+            <span key={index}>{letter}</span>
+          ))
+        }
+      </h1>
       <h2>
         {text}
         {
           isCursorVisible && <span className='cursor'>|</span>
         }
       </h2>
+
       <div className='text-box'>
+
         <p>
         Soy ingeniero en electrónica y telecomunicaciones que actualmente
         trabaja como desarrollador <strong>FRONTEND</strong> y <strong>DEVOPS</strong> en una compañía

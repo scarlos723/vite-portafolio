@@ -29,6 +29,7 @@ import {
 } from 'react-icons/fa'
 import {
   GrMysql, GrNode
+  , GrCubes
 } from 'react-icons/gr'
 import { DiMaterializecss, DiReact } from 'react-icons/di'
 
@@ -39,8 +40,22 @@ export default function Skills () {
         <h2>
           Habilidades
         </h2>
-        <div>
-          <DiReact color='#04061F' />
+        <div className='grid'>
+          <section className='front'>
+            <DiReact />
+            <h4> Frontend </h4>
+          </section>
+          <div className='separator' />
+          <section className='back'>
+            <GrNode/>
+            <h4>Backend</h4>
+          </section>
+          <div className='separator' />
+          <section className='others'>
+            <GrCubes />
+            <h4>Others</h4>
+          </section>
+
         </div>
       </MiniCard>
 
@@ -59,7 +74,7 @@ export default function Skills () {
               </ul>
             </section>
             <section>
-              <hh4>Frameworks <br /> / <br /> Libraries</hh4>
+              <h4>Frameworks <br /> / <br /> Libraries</h4>
 
               <ul>
                 <li> <DiReact color='white' />React</li>

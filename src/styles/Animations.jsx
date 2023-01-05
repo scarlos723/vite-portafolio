@@ -15,7 +15,7 @@ const blinkKeyframes = keyframes`
 `
 const neonKeyframes = () => {
   let cssString = ''
-  const basePx = 3
+  const basePx = 5
   for (let i = 0; i <= 10; i++) {
     const randNumber = Math.random()
     const base = basePx * randNumber
@@ -28,10 +28,10 @@ const neonKeyframes = () => {
         0 0 ${base * 5}px #93A8ED,
         0 0 ${base * 6}px #93A8ED,
         0 0 ${base * 7}px #93A8ED;
+      opacity: ${0.1 + randNumber};
       }
       `
   }
-  console.log(cssString)
   return keyframes`${cssString}`
 }
 
@@ -61,8 +61,9 @@ export const shadowAnimation = ({ time = '1s', type = 'ease' } = {}) => css`
   animation:  ${shadowKeyframes} ${time} ${type} infinite;
 `
 
-export const neonAnimation = ({ time = '1s', type = 'ease-in-out' } = {}) => css`
+export const neonAnimation = ({ time = '1s', type = 'ease-in-out', delay = '0s' } = {}) => css`
   animation:  ${neonKeyframes()} ${time} ${type} infinite alternate;
+  animation-delay: ${delay};
 `
 
 export const sideMoveAnimation = ({ time = '1s', type = 'ease-in-out', delay = '0s' } = {}) => css`
