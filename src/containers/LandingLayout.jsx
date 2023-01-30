@@ -9,11 +9,11 @@ const LandingLayout = () => {
   return (
     <>
       <main>
-        <header className='container'>
+        {/* <header className='container'>
           <nav>
             <MenuIcon />
           </nav>
-        </header>
+        </header> */}
         <section className="container">
           <Introduction />
         </section>

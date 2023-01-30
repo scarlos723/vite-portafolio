@@ -1,4 +1,4 @@
-import { SiWhatsapp } from 'react-icons/si'
+// import { SiWhatsapp } from 'react-icons/si'
 import { Container } from './styles'
 
 export default function Contact () {
