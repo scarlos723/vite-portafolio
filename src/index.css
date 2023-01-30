@@ -85,7 +85,7 @@ p > span{
   color: #12D466;
 } */
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4 ,h5{
   font-family: 'Fjalla One', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -107,7 +107,7 @@ h3{
   font-size: 1.125rem;
   line-height: 15px;
 }
-p{
+p,li{
   font-family: 'Roboto Mono', monospace;
   font-style: normal;
   font-weight: 300;
@@ -173,7 +173,7 @@ p{
     font-size: 1.125rem;
     line-height: 38px;
   } 
-  p{
+  p, li{
     font-size: 0.813rem;
     line-height: 16px;
   }
@@ -198,6 +198,11 @@ p{
     margin-top: 132px;
     max-width: 1108px;
   }
+  .grid-col-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+  }
 }
 
 
@@ -207,7 +212,7 @@ p{
   h2{
     font-size: 2.188rem;
   }
-  p{
+  p, li{
     font-size: 0.938rem;
     line-height: 18px;
   }
