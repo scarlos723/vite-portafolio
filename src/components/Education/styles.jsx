@@ -1,43 +1,64 @@
-import styled from 'styled-components'
-import { ResponsiveTo } from '../../hooks/useResponsive'
-import { ContainerGlobal } from '../../styles/styles'
+import styled, { css } from 'styled-components'
+// import { ResponsiveTo } from '../../hooks/useResponsive'
 
-export const Container = styled(ContainerGlobal)`
-  width: 90%;
-  height: 90vh;
+export const Container = styled.section`
   display: grid;
-  place-content: center;
-  margin: 20px auto;
-  .foot{
-    p{
-      text-align: center;
-    }
-  }
+  margin: 40px 0;
+  position: relative;
 `
-export const Card = styled.div`
+export const LargeSection = styled.div`
   display: grid;
-  gap: 16px;
-  margin-bottom: 40px;
-  div{
-    display: grid;
-    gap: 8px;
-    p{
-      text-align: center;
-      display: flex;
-      flex-direction: column;
+  position: absolute;
+  padding: 20px;
+  background-color: black;
+  box-shadow: 1px 1px 8px 0px #ffffff76;
+  top: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    li{
+      a{
+        color: white;
+      }
     }
   }
-  a{
-    color: #75E6DA;
+  .close-btn{
+    position: absolute;
+    top: 8px;
+    right: 8px;
   }
-  svg{
-    margin: 0 auto;
+  ${props => props.show
+    ? css`
+    top: -200px;
+    height: 400px;
+  `
+    : css`
+    padding: 0;
+    margin: 0;
+    height: 0;
+  `}
+
+`
+export const MiniCard = styled.article`
+  display: grid;
+  border: 0.5px solid white;
+  padding: 20px;
+  article{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    h4{
+      margin: 0;
+    }
   }
-  ${ResponsiveTo('md')}
-  {
-    svg{
-      width: 80px;
-      height: 80px;
+  .cursos{
+    h5{
+      text-align: right;
+      cursor: pointer;
+      text-transform: uppercase;
     }
   }
 `

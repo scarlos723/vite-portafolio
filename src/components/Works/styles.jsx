@@ -1,16 +1,16 @@
 import styled, { css } from 'styled-components'
 import { ResponsiveTo } from '../../hooks/useResponsive'
-import { ContainerGlobal } from '../../styles/styles'
 
-export const Container = styled(ContainerGlobal)`
+export const Container = styled.section`
   display: grid;
-  width: 90%;
-  margin: 80px auto;
+  width: 100%;
+  margin-top: 20px;
   gap: 50px;
   ${ResponsiveTo('md')}{
     gap:80px
   }
   ${ResponsiveTo('lg')}{
+    margin-top: 80px;
     gap:100px
   }
 `
@@ -23,7 +23,7 @@ export const TextBox = styled.div`
   gap: 12px;
   p{
     a{
-      color: #189AB4;
+      color: #899DB0;
     }
   }
   .text-img{
@@ -34,7 +34,7 @@ export const TextBox = styled.div`
       order: 1;
       width: 100%;
       border-radius: 20px;
-      box-shadow: 0px 0px 15px #189AB4;
+      box-shadow: 0px 0px 15px #899DB0;
       cursor: pointer;
       transition: all 0.3s ease;
       &:hover{
@@ -47,7 +47,7 @@ export const TextBox = styled.div`
     gap: 4px;
     align-items: center;
     font-weight: bold;
-    color: #189AB4;
+    color: #899DB0;
     cursor: pointer;
     svg{
       transition: all 0.3s;
@@ -55,16 +55,15 @@ export const TextBox = styled.div`
     }
   }
   .text-hidden{
-    height: 0;
+    height: 0px;
     overflow: hidden;
     opacity: 0;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
     ${props => props.show
     ? css`
-      height: auto;
+      height: 210px;
       opacity: 1;
-      width: 100%;  
-
+      width: 100%;
     `
     : ''}
   }

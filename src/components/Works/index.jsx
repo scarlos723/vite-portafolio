@@ -1,13 +1,16 @@
-import React from 'react'
+
 import { Container, Section, TextBox } from './styles'
 import { BiRightArrow } from 'react-icons/bi'
-import filmcoinImg from '../../assets/images/filmcoinWebsite.png'
-import tfttImg from '../../assets/images/tfttWebsite.png'
-import retriImg from '../../assets/images/retriWebsite.png'
+import filmcoinImg from '../../assets/images/thefilmcoinWebsite.webp'
+import tfttImg from '../../assets/images/tfttWebsite.webp'
+import retriImg from '../../assets/images/retriWebsite.webp'
+import darkhorseImg from '../../assets/images/darkhorseWebsite.webp'
+import { useState } from 'react'
 export default function Works () {
-  const [showFilmcoin, setShowFilmcoin] = React.useState(false)
-  const [showTFTT, setShowTFTT] = React.useState(false)
-  const [showRequi, setShowRequi] = React.useState(false)
+  const [showFilmcoin, setShowFilmcoin] = useState(false)
+  const [showTFTT, setShowTFTT] = useState(false)
+  const [showRequi, setShowRequi] = useState(false)
+  const [showDark, setShowDark] = useState(false)
   function goTo (url) {
     window.open(url)
   }
@@ -15,7 +18,6 @@ export default function Works () {
     <Container>
       <h2>Trabajos realizados</h2>
       <Section>
-
         <h3>FilmCoin</h3>
         <TextBox show={showFilmcoin}>
           <section className='text-img'>
@@ -26,16 +28,18 @@ export default function Works () {
               también cuenta una sección para hacer compras la cual ha sido configurada
               con distintas pasarelas de pagos como Stripe, Paypal y Coinpayments.
               </p>
-              <p onClick={() => setShowFilmcoin(!showFilmcoin)} className='text-action'>Leer mas <BiRightArrow color='#189AB4'/> </p>
+              <p onClick={() => setShowFilmcoin(!showFilmcoin)} className='text-action'>Leer mas <BiRightArrow color='#899DB0'/> </p>
               <div className='text-hidden'>
                 <p>
-                  Ha sido un gran reto, ya que la página la empece a desarrollar junto a un
-                  grupo de colegas y ha sufrido varios
-                  cambios de diseño y funcionalidad a lo largo del tiempo. A futuro la página estaría
-                  integrada con funcionalidades de WEB 3.0 y por lo cual tendré la oportunidad de brindar el soporte en desarrollo
+                  Ha sido un gran reto, ya que la página la empece a desarrollar
+                  junto a un grupo de colegas y ha sufrido varios cambios de diseño
+                  y funcionalidad a lo largo del tiempo. A futuro la
+                  página estaría integrada con funcionalidades de WEB 3.0 y
+                  por lo cual tendré la oportunidad de brindar el
+                  soporte en desarrollo
                 </p>
                 <p>
-                  Gracias a este proyecto pude investigar, aprender y aplicar conocimientos sobre tecnologías de backend
+                  Gracias a este proyecto aprender y aplicar conocimientos sobre tecnologías de backend
                   como Express, librerías de renderizado en 3D como Three Js y las pasarelas de pago anteriormente mencionadas.
                   También me pude certificar como desarrollador de contratos inteligentes con Solidity y conocer un poco más
                   sobre la WEB 3.0
@@ -45,7 +49,7 @@ export default function Works () {
             <img onClick={() => goTo('https://thefilmcoin.io/')} src={filmcoinImg} alt="" />
           </section>
 
-          <p>Puedes echar un vistazo al sitio WEB desde <a href="https://thefilmcoin.io/">aquí</a></p>
+          <p>Puedes echar un vistazo al sitio WEB desde <a target='_blank' href="https://thefilmcoin.io/" rel="noreferrer">aquí</a></p>
         </TextBox>
 
       </Section>
@@ -62,7 +66,7 @@ export default function Works () {
                 Prácticamente los retos afrontados aquí son más a la parte de dar los estilos requeridos
                 por el equipo de diseño.
               </p>
-              <p onClick={() => setShowTFTT(!showTFTT)} className='text-action'>Leer mas <BiRightArrow color='#189AB4'/> </p>
+              <p onClick={() => setShowTFTT(!showTFTT)} className='text-action'>Leer mas <BiRightArrow color='#899DB0'/> </p>
               <div className='text-hidden'>
                 <p>
                   Esta página la desarrollé junto a una colega de mi equipo de trabajo y
@@ -77,38 +81,61 @@ export default function Works () {
               </div>
 
             </div>
-            <p>Puedes ver el sitio web desde <a href="https://talesfromthetrap.com/">aquí</a></p>
+            <p>Puedes ver el sitio web desde <a target='_blank' href="https://talesfromthetrap.com/" rel="noreferrer">aquí</a></p>
           </section>
 
         </TextBox>
       </Section>
 
       <Section>
-
-        <h3>Web App (Retri)</h3>
+        <h3>Retri Web App</h3>
         <TextBox show={showRequi}>
           <section className='text-img'>
-
             <div>
               <p>
-              Retri es un producto que apenas se está creando y actualmente se encuentra en fase de desarrollo.
-              El website en fase de desarrollo contiene la información de lo que será un Web App que va a
-              revolucionar el alquiler de maquinaria pesada.
+              Retri es un producto emergente actualmente
+               en producción y es usado para el alquiler
+               de maquinaria pesada en Colombia.
               </p>
-              <p onClick={() => setShowRequi(!showRequi)} className='text-action'>Leer mas <BiRightArrow color='#189AB4'/> </p>
+              <p onClick={() => setShowRequi(!showRequi)} className='text-action'>Leer mas <BiRightArrow color='#899DB0'/> </p>
               <div className='text-hidden'>
                 <p>
-                En este proyecto he tenido la oportunidad de trabajar de manera individual en el Frontend, es por esto que hice uso
-                de tecnologías como Next y Tailwind para poder agilizar un poco los tiempos de entrega.
+                En este proyecto he tenido bastantes retos, ya que al ser una startup,
+                hay muchos cambios en la lógica y estructura del negocio. Empezamos
+                con tecnologías como Next y Tailwind para poder agilizar un poco
+                los tiempos de entrega. Pero luego migramos todo el proyecto a
+                ViteJs con Tailwind CSS y Styled Components para el estilado
                 </p>
               </div>
             </div>
             <img onClick={() => goTo('https://www.retri.app/')} src={retriImg} alt="" />
-            <p>Puedes echar un vistazo al sitio WEB desde <a href="https://www.retri.app/">aquí</a></p>
+            <p>Puedes echar un vistazo al sitio WEB desde <a target='_blank' href="https://www.retri.app/" rel="noreferrer">aquí</a></p>
           </section>
 
         </TextBox>
+      </Section>
 
+      <Section>
+        <h3 style={{ textAlign: 'right' }}>Darkhorse</h3>
+        <TextBox show={showDark}>
+          <section className='text-img'>
+            <img onClick={() => goTo('https://www.darkhorsefilms.io/')} src={darkhorseImg} alt="" />
+            <div>
+              <p>
+              Darkhorse es un estudio que trabaja con contenido digital,
+              el cual se impulsa por medio de blockchain.
+              Está fuertemente relacionado con Tales From The Trap y The Filmcoin.
+              </p>
+              <p onClick={() => setShowDark(!showDark)} className='text-action'>Leer mas <BiRightArrow color='#899DB0'/> </p>
+              <div className='text-hidden'>
+                <p>
+                Este proyecto lo empece de manera individual usando tecnologias como ViteJS y un combinado para los estilos como Tailwind CSS y Styled components. Gracias a este proyecto pude implementar una solución con CI/CD haciendo uso de AWS ECS y contenedores de Docker para el despliegue del Frontend
+                </p>
+              </div>
+            </div>
+            <p>Puedes echar un vistazo al sitio WEB desde <a target='_blank' href="https://www.darkhorsefilms.io/" rel="noreferrer">aquí</a></p>
+          </section>
+        </TextBox>
       </Section>
 
     </Container>

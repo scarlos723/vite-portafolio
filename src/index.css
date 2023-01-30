@@ -1,13 +1,26 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
-/*font-family: 'Space Mono', monospace;*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap'); 
+/* font-family: 'Roboto Mono', monospace; */
 
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Space+Mono:ital@1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&family=Space+Mono&display=swap");
-/* font-family: 'Space Grotesk', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+/* font-family: 'Fjalla One', sans-serif; */
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-/* font-family: 'Montserrat', sans-serif; */
+/* 
+https://www.canva.com/colors/color-palettes/sky-sheep/
+
+Blue Gray
+#899DB0
+
+Serenity
+#C3CDD6
+
+Royal Blue
+#15227A
+
+Dark Blue
+#04061F 
+*/
+
 
 html {
   box-sizing: border-box;
@@ -38,6 +51,7 @@ button {
 }
 ul {
   list-style: none;
+  color: white;
 }
 button {
   background: transparent;
@@ -48,7 +62,7 @@ body {
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #00000A;
+  background-color: #04061F;
   /* overflow-x: hidden; */
 
   overscroll-behavior: none; /* //evita que nuestra app haga rebotes cuando usamos scroll */
@@ -70,74 +84,65 @@ h2 > span{
 p > span{
   color: #12D466;
 } */
-h1{
-  font-family: 'Monument Extended';
+
+h1, h2, h3, h4 ,h5{
+  font-family: 'Fjalla One', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.875rem;
-  line-height: 116.5%;
-  /* identical to box height, or 35px */
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
-
   color: #FFFFFF;
+}
+h1{
+  font-size: 3.75rem;
+  line-height: 116.5%;
+  /* identical to box height, or 35px */ 
+ 
 }
 h2{
-  font-family: 'Monument Extended';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 110%;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FFFFFF;
 }
 h3{
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
   font-size: 1.125rem;
   line-height: 15px;
-  letter-spacing: -0.05em;
-  text-transform: capitalize;
-  color:#ffffff;
 }
-p{
-  font-family: 'Montserrat';
+p,li{
+  font-family: 'Roboto Mono', monospace;
   font-style: normal;
   font-weight: 300;
-  font-size:  0.8rem;
+  font-size:  0.625rem;
   line-height: 150%;
-  /* or 18px */
   text-align: left;
   color: #FFFFFF;
 }
-
+.container{
+  display: grid;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0px 8%;
+  margin: 0 auto;
+}
 /* Custom Elements */
 .gray-btn , .green-btn{
   padding: 8px 12px 12px 12px;
-  font-family: 'Monument Extended';
+  font-family: 'Fjalla One', sans-serif;
+  text-transform: uppercase;
   font-style: normal;
   font-weight: 400;
   font-size: 0.938rem;
   line-height: 144.7%;
-
   text-align: center;
   letter-spacing: 0.025em;
-  text-transform: uppercase;
   color: #FFFFFF;
-
   box-sizing: border-box;
   border-radius: 10px;
   cursor: pointer;
-
   transition: all 0.3s;
 }
 .gray-btn:hover , .green-btn:hover{
-  
   background: white;
   color: #000000;
-  
 }
 .gray-btn {
   background: rgba(158, 168, 189, 0.31);
@@ -159,16 +164,16 @@ p{
 
 @media (min-width: 760px) { 
   h1{
-    font-size: 3.125rem;
+    font-size: 4.75rem;
   }
   h2{
-    font-size: 30px;
+    font-size: 1.25rem;
   }
   h3{
     font-size: 1.125rem;
     line-height: 38px;
   } 
-  p{
+  p, li{
     font-size: 0.813rem;
     line-height: 16px;
   }
@@ -183,12 +188,20 @@ p{
 
 /******* Small Desktop *******/
 @media (min-width: 1024px) { 
+  h1{
+    font-size: 5.25rem;
+  }
   h3{
     font-size:1.125rem;
   }
   .custom-bottom-line{
     margin-top: 132px;
     max-width: 1108px;
+  }
+  .grid-col-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
   }
 }
 
@@ -197,9 +210,9 @@ p{
 
 @media (min-width: 1200px) { 
   h2{
-    font-size: 35px;
+    font-size: 2.188rem;
   }
-  p{
+  p, li{
     font-size: 0.938rem;
     line-height: 18px;
   }
