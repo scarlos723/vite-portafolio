@@ -1,6 +1,6 @@
 import Education from '../components/Education'
 import { Introduction } from '../components/Introduction'
-import MenuIcon from '../components/MenuIcon'
+// import MenuIcon from '../components/MenuIcon'
 import Skills from '../components/Skills'
 import Works from '../components/Works'
 import Contact from '../components/Contact'

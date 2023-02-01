@@ -8,6 +8,7 @@ export const Container = styled.section`
   background-image: url(${setupImg});
   backdrop-filter: blur(11000px);
   background-size: cover;
+  position: relative;
 `
 export const MiniCard = styled.article`
   display: grid;
@@ -100,7 +101,7 @@ export const ExpandSection = styled.section`
   box-sizing: border-box;
   padding: 12px 4px;
   padding-top: 60px;
-  top: -80%;
+  top: 0;
   left: 0;
   overflow: hidden;
   transition: all 0.5s ease-in-out;
@@ -108,15 +109,13 @@ export const ExpandSection = styled.section`
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
   border-radius: 12px;
   ${props => props.showExpand
     ? css`
-    width: 100%;
-    height:60vh;
-  `
+      width: 100%;
+      height: 60vh;
+    `
     : css`
-    
     top: 20px;
     width: 100%;
     height: 0px;
