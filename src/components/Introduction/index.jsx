@@ -47,7 +47,7 @@ export const Introduction = () => {
       <div className='text-box'>
         <p>
         Soy ingeniero en electrónica y telecomunicaciones que actualmente
-        trabaja como desarrollador <strong>FRONTEND</strong> y <strong>DEVOPS</strong> en una compañía
+        trabaja como desarrollador <strong>DEVOPS</strong> y <strong>LEAD FRONTEND</strong>  en una compañía
         de servicios tecnológicos.
         Me motiva el aprendizaje constante y los retos. Hago
         uso de herramientas modernas para la creación y despliegue
