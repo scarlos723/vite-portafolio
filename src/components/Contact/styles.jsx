@@ -9,6 +9,16 @@ export const Container = styled.section`
   border-top: 0.5px solid #ffffff;
   padding-top: 20px;
   gap: 20px;
+  p{
+    text-align: center;
+  }
+  .social-bar{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
   section{
     display: flex;
     flex-direction: column;

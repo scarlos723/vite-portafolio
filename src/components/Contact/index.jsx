@@ -1,13 +1,22 @@
 // import { SiWhatsapp } from 'react-icons/si'
 import { Container } from './styles'
+import { AiOutlineLinkedin, AiFillGithub } from 'react-icons/ai'
 
 export default function Contact () {
   return (
     <Container>
-      <section>
-        <h3>¿Quieres saludarme?</h3>
-        <p>Puedes escribirmme - <a href="mailto:carlossde58@gmail.com">carlossde58@gmail.com</a></p>
-        {/* <p> <SiWhatsapp /> Whatsapp - 3205105983</p> */}
+      <p>
+        <strong>
+          Follow me on social media
+        </strong>
+      </p>
+      <section className='social-bar'>
+        <a href='https://www.linkedin.com/in/carlos-sanchez-69b277196/'>
+          <AiOutlineLinkedin color='white' size={40}/>
+        </a>
+        <a href="https://github.com/scarlos723">
+          <AiFillGithub color='white' size={40}/>
+        </a>
       </section>
       <section>
         <p>Designed and developed by Carlos Sanchez</p>
