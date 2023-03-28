@@ -4,7 +4,7 @@ import { Container } from './styles'
 export const Introduction = () => {
   const [text, setText] = useState('')
   const [isCursorVisible, setIsCursorVisible] = useState(true)
-  const textContent = '  yo soy Carlos Sanchez'
+  const textContent = '  soy Carlos Sanchez'
   let i = 0
   const speed = 100
 
@@ -45,16 +45,13 @@ export const Introduction = () => {
       </h2>
 
       <div className='text-box'>
-
         <p>
         Soy ingeniero en electrónica y telecomunicaciones que actualmente
         trabaja como desarrollador <strong>FRONTEND</strong> y <strong>DEVOPS</strong> en una compañía
         de servicios tecnológicos.
-        </p>
-        <p>
-          Me motiva el aprendizaje constante y los retos. Hago
-          uso de herramientas modernas para la creación y despliegue
-          de aplicaciones WEB o soluciones relacionados.
+        Me motiva el aprendizaje constante y los retos. Hago
+        uso de herramientas modernas para la creación y despliegue
+        de aplicaciones WEB o soluciones relacionados.
         </p>
         <p>
           Bienvenido a mi portafolio,

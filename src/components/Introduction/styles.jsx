@@ -34,6 +34,7 @@ export const Container = styled.div`
   .text-box{
     opacity: 0;
     ${sideMoveAnimation({ time: '1s', delay: '2s' })}
+    
   }
 
 `

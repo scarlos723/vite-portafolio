@@ -9,6 +9,7 @@ export const Container = styled.section`
   backdrop-filter: blur(11000px);
   background-size: cover;
   position: relative;
+  background-attachment: fixed;
 `
 export const MiniCard = styled.article`
   display: grid;
