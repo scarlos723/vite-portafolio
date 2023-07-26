@@ -1,125 +1,33 @@
 {
-  "ipcMode": null,
-  "executionRoleArn": "arn:aws:iam::233418373340:role/AWSECSTaskExecutionRole",
   "containerDefinitions": [
     {
-      "dnsSearchDomains": null,
-      "environmentFiles": null,
+      "name": "sbcat-container",
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 80,
+          "protocol": "tcp"
+        }
+      ],
       "logConfiguration": {
         "logDriver": "awslogs",
-        "secretOptions": null,
         "options": {
-          "awslogs-group": "/ecs/portafolio-task",
-          "awslogs-region": "us-east-1",
+          "awslogs-create-group": "true",
+          "awslogs-group": "/ecs/sbcat-task",
+          "awslogs-region": "eu-east-1",
           "awslogs-stream-prefix": "ecs"
         }
       },
-      "entryPoint": [],
-      "portMappings": [
-        {
-          "hostPort": 80,
-          "protocol": "tcp",
-          "containerPort": 80
-        }
-      ],
-      "command": [],
-      "linuxParameters": null,
-      "cpu": 0,
-      "environment": [],
-      "resourceRequirements": null,
-      "ulimits": null,
-      "dnsServers": null,
-      "mountPoints": [],
-      "workingDirectory": null,
-      "secrets": null,
-      "dockerSecurityOptions": null,
-      "memory": 1000,
-      "memoryReservation": 500,
-      "volumesFrom": [],
-      "stopTimeout": null,
-      "image": "233418373340.dkr.ecr.us-east-1.amazonaws.com/personal-test:portafoliofront",
-      "startTimeout": null,
-      "firelensConfiguration": null,
-      "dependsOn": null,
-      "disableNetworking": null,
-      "interactive": null,
-      "healthCheck": null,
-      "essential": true,
-      "links": null,
-      "hostname": null,
-      "extraHosts": null,
-      "pseudoTerminal": null,
-      "user": null,
-      "readonlyRootFilesystem": null,
-      "dockerLabels": null,
-      "systemControls": null,
-      "privileged": null,
-      "name": "portafolio-container"
+      "essential": true
     }
   ],
-  "placementConstraints": [],
-  "memory": null,
+  "family": "sbcat-task",
   "taskRoleArn": "arn:aws:iam::233418373340:role/AWSECSTaskExecutionRole",
-  "compatibilities": [
-    "EXTERNAL",
-    "EC2"
-  ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:233418373340:task-definition/portafolio-task:1",
-  "family": "portafolio-task",
-  "requiresAttributes": [
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "ecs.capability.execution-role-awslogs"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.ecr-auth"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.task-iam-role"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "ecs.capability.execution-role-ecr-pull"
-    }
-  ],
-  "pidMode": null,
+  "executionRoleArn": "arn:aws:iam::233418373340:role/AWSECSTaskExecutionRole",
+  "networkMode": "awsvpc",
   "requiresCompatibilities": [
-    "EC2"
+    "FARGATE"
   ],
-  "networkMode": "bridge",
-  "runtimePlatform": null,
-  "cpu": null,
-  "revision": 1,
-  "status": "ACTIVE",
-  "inferenceAccelerators": null,
-  "proxyConfiguration": null,
-  "volumes": []
+  "cpu": "256",
+  "memory": "512"
 }

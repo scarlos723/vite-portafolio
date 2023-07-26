@@ -5,10 +5,11 @@ on:
     branches: [ main ]
 
 env:
-  ECS_CLUSTER: cluster-portafolio
-  ECS_SERVICE: portafolio-service
+  ECR_REGISTRY: ecr-sbcat
+  ECS_CLUSTER: sbcat-cluster
+  ECS_SERVICE: sbcat-service
   ECS_TASK_DEFINITION: definition.json
-  CONTAINER_NAME: portafolio-container
+  CONTAINER_NAME: sbcat-container
 
 jobs:
 
@@ -45,7 +46,7 @@ jobs:
         id: build-image
         env:
           REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          REPOSITORY: personal-test
+          REPOSITORY: ${{ env.ECR_REGISTRY }}
           IMAGE_TAG: ${{ github.sha }}
         run: |
           docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
