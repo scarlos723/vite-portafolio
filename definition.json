@@ -23,7 +23,7 @@
   ],
   "family": "sbcat-task",
   "taskRoleArn": "arn:aws:iam::233418373340:role/AWSECSTaskExecutionRole",
-  "executionRoleArn": "arn:aws:iam::233418373340:role/AWSECSTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::233418373340:role/AWSECSTaskExecutionRolegit remote show origin",
   "networkMode": "awsvpc",
   "requiresCompatibilities": [
     "FARGATE"
