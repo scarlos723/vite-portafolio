@@ -9,7 +9,7 @@ env:
   ECS_CLUSTER: sbcat-cluster
   ECS_SERVICE: sbcat-service
   ECS_TASK_DEFINITION: definition.json
-  CONTAINER_NAME: sbcat-container
+  CONTAINER_NAME: nginx-container
 
 jobs:
 
