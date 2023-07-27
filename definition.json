@@ -1,7 +1,7 @@
 {
   "containerDefinitions": [
     {
-      "name": "sbcat-container",
+      "name": "nginx-container",
       "portMappings": [
         {
           "containerPort": 80,
@@ -23,7 +23,7 @@
   ],
   "family": "sbcat-task",
   "taskRoleArn": "arn:aws:iam::233418373340:role/AWSECSTaskExecutionRole",
-  "executionRoleArn": "arn:aws:iam::233418373340:role/AWSECSTaskExecutionRolegit remote show origin",
+  "executionRoleArn": "arn:aws:iam::233418373340:role/AWSECSTaskExecutionRole",
   "networkMode": "awsvpc",
   "status": "ACTIVE",
   "requiresAttributes": [
