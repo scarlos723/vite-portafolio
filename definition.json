@@ -14,7 +14,7 @@
         "options": {
           "awslogs-create-group": "true",
           "awslogs-group": "/ecs/sbcat-task",
-          "awslogs-region": "eu-east-1",
+          "awslogs-region": "us-east-1",
           "awslogs-stream-prefix": "ecs"
         }
       },
