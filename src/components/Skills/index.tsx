@@ -2,8 +2,15 @@ import { TECHNOLOGIES } from './list'
 import { motion } from 'framer-motion'
 import styles from './styles.module.css'
 import { useEffect, useState } from 'react'
+import { useParallax } from './useParallax'
 export default function Skills() {
   const [radio, setRadio] = useState(120)
+  const {
+    customStyles,
+    titleStyles,
+    refContainer,
+    iconStyles
+  } = useParallax()
 
 
   function getOrbitPosition(index: number) {
@@ -33,31 +40,57 @@ export default function Skills() {
     window.addEventListener('resize', getWindowSize)
   }, [])
   return (
-    <section className="container relative min-h-[100dvh] z-[100] py-10">
-      <h1 className='text-center mb-20'>
-        Habilidades
-      </h1>
-      <div className="grid md:grid-cols-2">
-        <section className="container grid">
+    <section ref={refContainer} className="container relative min-h-[100dvh] z-[100] py-20">
+      <motion.h1 className='text-center mb-20'
+        style={{
+          y:titleStyles.y,
+          opacity:titleStyles.opacity
+      
+        }}
+      >
+        Habilidades y tecnologías
+      </motion.h1>
+      <div className="grid gap-20  lg:grid-cols-2">
+        <section className="grid">
           <div className="grid gap-4 rounded-lg my-auto">
-            <p className=" backdrop-blur-md">
+            <motion.p className=" backdrop-blur-md"
+              style={{
+                y:customStyles.y,
+                opacity:customStyles.opacity
+              }}
+            >
               Ingeniero en electronica y telecomunicaciones con experiencia en
               Development and IT Operations (<strong>DEVOPS</strong>) y lider de
               proyectos <strong>FRONTEND</strong>.
-            </p>
-            <p className=" backdrop-blur-md">
+            </motion.p>
+            <motion.p className=" backdrop-blur-md"
+              style={{
+                y:customStyles.y,
+                opacity:customStyles.opacity
+              }}
+            >
               Me motiva el aprendizaje constante y los retos. Me mantengo al
               tanto de herramientas modernas para la creación y despliegue de
               aplicaciones WEB o crear soluciones relacionadas.
-            </p>
-            <p className=" backdrop-blur-md">
+            </motion.p>
+            <motion.p className=" backdrop-blur-md"
+              style={{
+                y:customStyles.y,
+                opacity:customStyles.opacity
+              }}
+            >
               Bienvenido a mi portafolio, aquí podrás encontrar información
               sobre mis habilidades, las tecnologías que conozco y algunos
               proyectos en los que he trabajado.
-            </p>
+            </motion.p>
           </div>
         </section>
-        <section className="grid w-full ">
+        <motion.section className="grid w-full"
+          style={{
+            x:iconStyles.x,
+            opacity:iconStyles.opacity
+          }}
+        >
           <div
             className={styles['halo']}
           >
@@ -80,7 +113,7 @@ export default function Skills() {
               </motion.div>
             ))}
           </div>
-        </section>
+        </motion.section>
       </div>
     </section>
   )
