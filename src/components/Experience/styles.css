@@ -1,0 +1,58 @@
+@property --gradient-angle{
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+
+.experience-card{
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  padding: 3px;
+
+}
+
+.experience-card::before, .experience-card::after{
+  content: '';
+  position: absolute;
+  inset: -.5rem;
+  border-radius: 40px;
+  width: 101%;
+  height: 102%;
+  top: -1%;
+  left: -0.5%;
+  filter: blur(1rem);
+  z-index: -1;
+  animation: rotateAnimate 5s linear infinite;
+  transition: all 0.5s;
+  opacity: 0;
+}
+.experience-card{
+  transition: all 1s;
+}
+.experience-card:hover:before, .experience-card:hover:after {
+  background: linear-gradient(  var(--gradient-angle) , #65ffce, #c990ff, transparent,);
+  opacity: 1;
+}
+.experience-card:hover:after {
+  background: linear-gradient(  var(--gradient-angle) , transparent, #65ffce, #c990ff );
+  opacity: 1;
+
+}
+
+
+@keyframes rotateAnimate {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+  
+}

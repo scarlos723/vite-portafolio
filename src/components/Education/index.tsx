@@ -1,11 +1,11 @@
 
 const Education = () => {
   return (
-    <section>
-      <h1 className="text-center">
+    <section className="py-10">
+      <h1 className="text-center mb-10">
         Formacion
       </h1>
-      <div className="container relative grid gap-10 md:grid-cols-2 h-[100dvh] items-center">
+      <div className="container relative grid gap-10 md:grid-cols-2 items-center">
         <div>
 
           <section>

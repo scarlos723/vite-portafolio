@@ -1,7 +1,7 @@
 import styles from './styles.module.css'
 import { Suspense, lazy } from 'react'
 import { motion } from 'framer-motion'
-import { useParallax } from '../../hooks/useParallax'
+import { useParallax } from './useParallax'
 import { SiLinkedin } from 'react-icons/si'
 import { FaGithub } from 'react-icons/fa'
 import StarsBg from './stars'
@@ -23,7 +23,7 @@ const Intro = () => {
         </Suspense>
       </div>
     
-      <div className='absolute  bg-gradient-to-b from-transparent from-50% to-black w-[100dvw] h-[100%]'>
+      <div className='absolute bg-gradient-to-t from-[#050505] from-10% to-transparent to-50%  w-[100dvw] h-[115%]'>
 
       </div>
     </motion.div>
@@ -43,8 +43,8 @@ const Intro = () => {
           >
             <h2 className="text-2xl text-center ">Carlos Sánchez</h2>
             <h1 className='text-center'>
-          Frontend Developer &
-           Site Reliability Engineer
+            Software Developer &
+            Site Reliability Engineer
             </h1>
           </motion.div>
           <div className='flex w-full mt-10 md:mt-20 justify-center gap-10'>
@@ -53,7 +53,7 @@ const Intro = () => {
               onClick={()=>window.open('https://www.linkedin.com/in/carlos-sanchez-69b277196/')}
               style={{
                 color:textStyles.color,
-                opacity:textStyles.opacityIcon,
+                opacity:textStyles.opacity,
                 //boxShadow:textStyles.boxShadow
               }}
             >
@@ -64,7 +64,7 @@ const Intro = () => {
               onClick={()=>window.open('https://github.com/scarlos723')}
               style={{
                 color:textStyles.color,
-                opacity:textStyles.opacityIcon,
+                opacity:textStyles.opacity,
                 //boxShadow:textStyles.boxShadow
               }}
             >

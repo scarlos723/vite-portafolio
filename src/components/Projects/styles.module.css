@@ -34,8 +34,12 @@
   background: #252525;
   box-shadow: 1px 1px 10px #d0beffd2;
   bottom: -52px;
-  @media screen and (max-width: 768px) {
+
+
+}
+
+@media screen and (min-width: 1024px) {
+  .subcard{
     left: -72px;
-    
   }
 }

@@ -2,9 +2,9 @@
 const Profile = () => {
   return (
     <section className='container min-h-[100dvh]  grid'>
-      <div className='grid gap-4 rounded-lg my-auto'>
+      <div className='grid gap-4 rounded-lg my-auto text-balance'>
         <p className=' backdrop-blur-md'>
-  Ingeniero en electronica y telecomunicaciones con experiencia en Development and IT 
+  Soy Ingeniero en electronica y telecomunicaciones con experiencia en Development and IT 
   Operations (<strong>DEVOPS</strong>) y lider de proyectos <strong>FRONTEND</strong>. 
 
         </p>

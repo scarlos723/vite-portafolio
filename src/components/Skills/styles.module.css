@@ -18,15 +18,10 @@
   margin: auto;
   border-radius: 50%;
   animation: rotateColors 5s ease-in-out infinite;
-}
-.halo-sm{
-  width: 200px;
-  height: 200px;
-}
-.halo-lg{
   width: 300px;
   height: 300px;
 }
+
 
 .tech-item{
   display: flex;
@@ -41,7 +36,12 @@
   width: 50px;
   height: 50px;
   z-index: 0;
+  box-shadow: 1px 1px 10px #d0beffd2;
+  transition: box-shadow 0.3s;
+  left: calc(50% - 25px);
+  top: calc(50% - 25px);
   &:hover{
+    box-shadow: none;
     z-index: 2;
   }
 }
