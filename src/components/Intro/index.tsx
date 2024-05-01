@@ -43,8 +43,7 @@ const Intro = () => {
           >
             <h2 className="text-2xl text-center ">Carlos Sánchez</h2>
             <h1 className='text-center'>
-            Software Developer &
-            Site Reliability Engineer
+            Software Developer, Infrastructure & SRE
             </h1>
           </motion.div>
           <div className='flex w-full mt-10 md:mt-20 justify-center gap-10'>
