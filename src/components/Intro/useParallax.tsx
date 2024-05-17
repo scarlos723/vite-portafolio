@@ -1,4 +1,3 @@
-
 import { useScroll, useTransform } from 'framer-motion'
 
 import { useRef } from 'react'
@@ -11,20 +10,17 @@ export const useParallax = () => {
     offset: ['start start', 'end start']
   })
 
- 
   const textStyles = {
-    color:  useTransform(scrollYProgress, [0, 0.1], ['#000000', '#ffffff']),
+    color: useTransform(scrollYProgress, [0, 0.1], ['#000000', '#ffffff']),
     y: useTransform(scrollYProgress, [0, 0.1, 0.2, 0.7], [0, 150, 250, 1000]),
     opacity: useTransform(scrollYProgress, [0, 0.2, 0.5], [1, 1, 0]),
     opacityIcon: useTransform(scrollYProgress, [0, 0.3, 0.7], [1, 0, 0]),
-    starColor: useTransform(scrollYProgress, [0,0.2], ['rgba(221, 208, 255, 0)','#ffffff'])
+    starColor: useTransform(scrollYProgress, [0, 0.2], ['rgba(221, 208, 255, 0)', '#ffffff'])
   }
-  const bannerStyles =  {
+  const bannerStyles = {
     y: useTransform(scrollYProgress, [0, 1], [0, 0]),
-    color:  useTransform(scrollYProgress, [0, 0.1], ['#d0beffd2', '#000000'])
-
+    color: useTransform(scrollYProgress, [0, 0.1], ['#d0beffd2', '#000000'])
   }
-  
 
   return {
     homeBannerRef,

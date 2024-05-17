@@ -11,7 +11,7 @@ export const useParallax = () => {
   })
 
   const titleStyles = {
-    y: useTransform(scrollYProgress, [0, 0.1, 0.2, 0.7], [0, -250, -350, -500]),
+    x: useTransform(scrollYProgress, [0, 0.1, 0.2, 0.7], [0, -150, -250, -500]),
     opacity: useTransform(scrollYProgress, [0, 0.2, 0.5], [1, 1, 0])
   }
   const customStyles = {
