@@ -3,7 +3,7 @@ import './styles.css'
 import { motion } from 'framer-motion'
 const Experience = () => {
   return (
-    <section className='container relative z-10 containe min-h-[100dvh]'>
+    <section className='container relative z-10 containe min-h-[100vh]'>
       <div>
         <motion.h1
           className='text-white text-center mb-20'

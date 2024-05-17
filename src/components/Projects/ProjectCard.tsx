@@ -23,7 +23,7 @@ const ProjectCard = (props: ProjectCardProps) => {
   return (
     <div
       key={index}
-      className='min-h-[100dvh] grid py-20 box-border items-center lg:grid-cols-[2fr_1fr] lg:gap-10 lg:items-start xl:grid-cols-2 xl:gap-20'
+      className='min-h-[100vh] grid py-20 box-border items-center lg:grid-cols-[2fr_1fr] lg:gap-10 lg:items-start xl:grid-cols-2 xl:gap-20'
     >
       <div>
         <h2 className='text-3xl mb-2'>{project.title}</h2>

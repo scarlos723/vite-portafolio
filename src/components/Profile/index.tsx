@@ -1,6 +1,6 @@
 const Profile = () => {
   return (
-    <section className='container min-h-[100dvh]  grid'>
+    <section className='container min-h-[100vh]  grid'>
       <div className='grid gap-4 rounded-lg my-auto text-balance'>
         <p className=' backdrop-blur-md'>
           Soy Ingeniero en electronica y telecomunicaciones con experiencia en Development and IT

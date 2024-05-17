@@ -35,7 +35,7 @@ export default function Skills() {
   return (
     <section
       ref={refContainer}
-      className='container relative min-h-[100dvh] z-[100] py-20'
+      className='container relative min-h-[100vh] z-[100] py-20'
     >
       <motion.h1
         className='text-center mb-20'
