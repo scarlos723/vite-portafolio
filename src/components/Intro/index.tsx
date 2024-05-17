@@ -12,7 +12,7 @@ const Intro = () => {
   return (
     <>
       <motion.div
-        className='absolute z-[0] top-0 h-[100vh] w-[100vw]'
+        className='absolute z-[0] top-0 min-h-[100vh] h-[100vh] w-[100vw]'
         style={{
           y: bannerStyles.y,
           backgroundColor: bannerStyles.color
@@ -30,7 +30,7 @@ const Intro = () => {
       <div className='relative gap-20 grid w-full'>
         <section
           ref={homeBannerRef}
-          className='container grid  relative min-h-[100dvh] '
+          className='container grid  relative min-h-[100vh] '
         >
           <div className='mx-auto mt-20 relative'>
             <div className={styles.light}>
