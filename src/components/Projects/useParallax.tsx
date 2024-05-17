@@ -11,22 +11,22 @@ export const useParallax = () => {
   })
 
   const titleStyles = {
-    x: useTransform(scrollYProgress, [0, 0.1, 0.2, 0.7], [0, -150, -250, -500]),
+    y: useTransform(scrollYProgress, [0, 0.1, 0.2, 0.7], [0, 150, -250, -500]),
     opacity: useTransform(scrollYProgress, [0, 0.2, 0.5], [1, 1, 0])
   }
   const customStyles = {
-    y: useTransform(scrollYProgress, [0, 0.1, 0.2, 0.7], [0, 150, -150, -500]),
+    y: useTransform(scrollYProgress, [0, 0.1, 0.2, 0.7], [0, 250, -150, -500]),
     opacity: useTransform(scrollYProgress, [0, 0.2, 0.5], [1, 1, 0])
   }
-  const iconStyles = {
-    x: useTransform(scrollYProgress, [0, 0.1, 0.2, 0.7], [0, 0, 250, 500]),
-    opacity: useTransform(scrollYProgress, [0, 0.2, 0.5], [1, 1, 0])
+  const customStyles2 = {
+    y: useTransform(scrollYProgress, [0, 0.3, 0.8, 1], [0, -150, -250, -500]),
+    opacity: useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0])
   }
 
   return {
-    iconStyles,
     titleStyles,
     refContainer,
-    customStyles
+    customStyles,
+    customStyles2
   }
 }

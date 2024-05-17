@@ -3,7 +3,7 @@ import ProjectCard from './ProjectCard'
 import { useParallax } from './useParallax'
 import { motion } from 'framer-motion'
 const Projects = () => {
-  const { iconStyles, titleStyles, refContainer, customStyles } = useParallax()
+  const { titleStyles, refContainer, customStyles, customStyles2 } = useParallax()
   return (
     <section
       ref={refContainer}
@@ -11,7 +11,7 @@ const Projects = () => {
     >
       <motion.h1
         style={{
-          x: titleStyles.x,
+          y: titleStyles.y,
           opacity: titleStyles.opacity
         }}
         className='text-center'
@@ -19,11 +19,18 @@ const Projects = () => {
         Proyectos
       </motion.h1>
       {listProjects.map((project, index) => (
-        <ProjectCard
+        <motion.div
           key={index}
-          project={project}
-          index={index}
-        ></ProjectCard>
+          style={{
+            y: index === 0 ? customStyles.y : customStyles2.y,
+            opacity: index === 0 ? customStyles.opacity : customStyles2.opacity
+          }}
+        >
+          <ProjectCard
+            project={project}
+            index={index}
+          ></ProjectCard>
+        </motion.div>
       ))}
     </section>
   )

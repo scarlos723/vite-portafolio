@@ -1,5 +1,5 @@
 import styles from './styles.module.css'
-import { motion } from 'framer-motion'
+
 interface ProjectCardProps {
   project: {
     title: string
@@ -21,15 +21,11 @@ const ProjectCard = (props: ProjectCardProps) => {
     window.open(url)
   }
   return (
-    <motion.div
+    <div
       key={index}
       className='min-h-[100dvh] grid py-20 box-border items-center lg:grid-cols-[2fr_1fr] lg:gap-10 lg:items-start xl:grid-cols-2 xl:gap-20'
     >
-      <motion.div
-        initial={{ opacity: 0, y: 300 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, type: 'spring', stiffness: 100 }}
-      >
+      <div>
         <h2 className='text-3xl mb-2'>{project.title}</h2>
         <p className='text-balance'>{project.description}</p>
 
@@ -47,10 +43,8 @@ const ProjectCard = (props: ProjectCardProps) => {
             <p>{project.scalability}</p>
           </section>
         </div>
-      </motion.div>
-      <motion.article
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
+      </div>
+      <article
         className={styles.card}
         onClick={() => goTo(project.url)}
       >
@@ -71,8 +65,8 @@ const ProjectCard = (props: ProjectCardProps) => {
             {project?.tech_icons?.map((icon) => icon)}
           </div>
         </section>
-      </motion.article>
-    </motion.div>
+      </article>
+    </div>
   )
 }
 
