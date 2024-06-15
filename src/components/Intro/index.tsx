@@ -38,21 +38,21 @@ const Intro = () => {
               <div className='' />
             </div>
             <motion.div
-              className='relative grid gap-10'
+              className='relative grid gap-2'
               style={{
                 opacity: textStyles.opacity,
                 y: textStyles.y,
                 color: textStyles.color
               }}
             >
-              <h2 className='text-2xl text-center '>Carlos Sánchez</h2>
-              <h1 className='text-center'>
-                Software Developer, <br /> Infrastructure <br />& SRE
-              </h1>
+              <h1 className=' text-center'>Carlos Sánchez</h1>
+              <h2 className='text-xl text-center'>
+                Software Developer, <br /> Infrastructure &<br /> SRE
+              </h2>
             </motion.div>
             <div className='flex w-full mt-10 md:mt-20 justify-center gap-10'>
               <motion.div
-                className='rounded-full p-1 cursor-pointer transition hover:scale-110'
+                className='rounded-md  cursor-pointer transition hover:shadow-2xl hover:shadow-white hover:scale-110'
                 onClick={() => window.open('https://www.linkedin.com/in/carlos-sanchez-69b277196/')}
                 style={{
                   color: textStyles.color,
@@ -63,7 +63,7 @@ const Intro = () => {
                 <SiLinkedin size={60}></SiLinkedin>
               </motion.div>
               <motion.div
-                className='rounded-full p-1  cursor-pointer transition hover:scale-110'
+                className='rounded-full p-1  cursor-pointer hover:shadow-2xl hover:shadow-white transition hover:scale-110'
                 onClick={() => window.open('https://github.com/scarlos723')}
                 style={{
                   color: textStyles.color,

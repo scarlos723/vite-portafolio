@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import styles from './styles.module.css'
 import { useEffect, useState } from 'react'
 import { useParallax } from './useParallax'
+import Meteors from '../Animations/Meteors'
 export default function Skills() {
   const [radio, setRadio] = useState(120)
   const { customStyles, titleStyles, refContainer, iconStyles } = useParallax()
@@ -33,84 +34,90 @@ export default function Skills() {
     window.addEventListener('resize', getWindowSize)
   }, [])
   return (
-    <section
-      ref={refContainer}
-      className='container relative min-h-[100vh] z-[100] py-20'
-    >
-      <motion.h1
-        className='text-center mb-20'
-        style={{
-          y: titleStyles.y,
-          opacity: titleStyles.opacity
-        }}
+    <>
+      <div className='absolute w-full min-h-[400px]'>
+        {' '}
+        <Meteors></Meteors>
+      </div>
+      <section
+        ref={refContainer}
+        className='container relative min-h-[100vh] z-[100] py-20'
       >
-        Habilidades y tecnologías
-      </motion.h1>
-      <div className='grid gap-20  lg:grid-cols-2'>
-        <section className='grid'>
-          <div className='grid gap-4 rounded-lg my-auto'>
-            <motion.p
-              className=' backdrop-blur-md'
-              style={{
-                y: customStyles.y,
-                opacity: customStyles.opacity
-              }}
-            >
-              Ingeniero en electronica y telecomunicaciones con experiencia en Development and IT
-              Operations (<strong>DEVOPS</strong>) y lider de proyectos <strong>FRONTEND</strong>.
-            </motion.p>
-            <motion.p
-              className=' backdrop-blur-md'
-              style={{
-                y: customStyles.y,
-                opacity: customStyles.opacity
-              }}
-            >
-              Me motiva el aprendizaje constante y los retos. Me mantengo al tanto de herramientas
-              modernas para la creación y despliegue de aplicaciones WEB o crear soluciones
-              relacionadas.
-            </motion.p>
-            <motion.p
-              className=' backdrop-blur-md'
-              style={{
-                y: customStyles.y,
-                opacity: customStyles.opacity
-              }}
-            >
-              Bienvenido a mi portafolio, aquí podrás encontrar información sobre mis habilidades,
-              las tecnologías que conozco y algunos proyectos en los que he trabajado.
-            </motion.p>
-          </div>
-        </section>
-        <motion.section
-          className='grid w-full'
+        <motion.h1
+          className='text-center mb-20'
           style={{
-            x: iconStyles.x,
-            opacity: iconStyles.opacity
+            y: titleStyles.y,
+            opacity: titleStyles.opacity
           }}
         >
-          <div className={styles['halo']}>
-            {TECHNOLOGIES.map((tech, index) => (
-              <motion.div
-                key={index}
-                className={styles['tech-item']}
-                whileInView={{ ...getOrbitPosition(index) }}
-                transition={{
-                  delay: Math.random() * index * 0.05,
-                  type: 'spring',
-                  stiffness: 50,
-                  damping: 5
+          Habilidades y tecnologías
+        </motion.h1>
+        <div className='grid gap-20  lg:grid-cols-2'>
+          <section className='grid'>
+            <div className='grid gap-4 rounded-lg my-auto'>
+              <motion.p
+                className=' backdrop-blur-md'
+                style={{
+                  y: customStyles.y,
+                  opacity: customStyles.opacity
                 }}
               >
-                {tech.icon}
-                <div className={`backdrop-blur-md ${styles['tech-name']}`}>
-                  <p className='text-white font-extrabold'>{tech.name}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
-      </div>
-    </section>
+                Ingeniero en electronica y telecomunicaciones con experiencia en Development and IT
+                Operations (<strong>DEVOPS</strong>) y lider de proyectos <strong>FRONTEND</strong>.
+              </motion.p>
+              <motion.p
+                className=' backdrop-blur-md'
+                style={{
+                  y: customStyles.y,
+                  opacity: customStyles.opacity
+                }}
+              >
+                Me motiva el aprendizaje constante y los retos. Me mantengo al tanto de herramientas
+                modernas para la creación y despliegue de aplicaciones WEB o crear soluciones
+                relacionadas.
+              </motion.p>
+              <motion.p
+                className=' backdrop-blur-md'
+                style={{
+                  y: customStyles.y,
+                  opacity: customStyles.opacity
+                }}
+              >
+                Bienvenido a mi portafolio, aquí podrás encontrar información sobre mis habilidades,
+                las tecnologías que conozco y algunos proyectos en los que he trabajado.
+              </motion.p>
+            </div>
+          </section>
+          <motion.section
+            className='grid w-full'
+            style={{
+              x: iconStyles.x,
+              opacity: iconStyles.opacity
+            }}
+          >
+            <div className={styles['halo']}>
+              {TECHNOLOGIES.map((tech, index) => (
+                <motion.div
+                  key={index}
+                  className={styles['tech-item']}
+                  whileInView={{ ...getOrbitPosition(index) }}
+                  transition={{
+                    delay: Math.random() * index * 0.05,
+                    type: 'spring',
+                    stiffness: 50,
+                    damping: 5
+                  }}
+                >
+                  {tech.icon}
+                  <div className={`backdrop-blur-md ${styles['tech-name']}`}>
+                    <p className='text-white font-extrabold'>{tech.name}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.section>
+        </div>
+      </section>
+    </>
   )
 }

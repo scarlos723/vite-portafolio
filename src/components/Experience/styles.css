@@ -13,10 +13,9 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: black;
   padding: 3px;
-
 }
+
 
 .experience-card::before, .experience-card::after{
   content: '';
