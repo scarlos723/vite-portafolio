@@ -1,7 +1,7 @@
 export const list= [
   {
     company:'Bpo2b',
-    position:'Devops / Frontend ',
+    position:'SRE / Devops / Frontend ',
     date:'2021 - actualidad',
     className:'lg:col-start-1 lg:col-end-9 ',
     responsabilities:[
