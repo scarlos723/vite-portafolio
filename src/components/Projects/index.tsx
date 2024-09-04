@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <section
       ref={refContainer}
-      className='container min-h-[200vh] pt-20'
+      className='container pt-20'
     >
       <motion.h1
         style={{

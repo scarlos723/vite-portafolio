@@ -1,21 +1,21 @@
-
 import Education from './components/Education'
 import Intro from './components/Intro'
 import Skills from './components/Skills'
-//import Sphere from './components/Sphere'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
+import Seo from './components/Seo'
 function App() {
-
   return (
-    <main  className='overflow-hidden relative'>
-      <Intro></Intro>
-      <Experience></Experience>
-      <Skills></Skills>
-      <Projects></Projects>
-      <Education></Education>
-    </main>
-  
+    <>
+      <Seo title='Carlos Sanchez' />
+      <main className='overflow-hidden relative'>
+        <Intro />
+        <Experience />
+        <Skills />
+        <Projects />
+        <Education />
+      </main>
+    </>
   )
 }
 

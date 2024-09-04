@@ -19,7 +19,7 @@ export const useParallax = () => {
     opacity: useTransform(scrollYProgress, [0, 0.2, 0.5], [1, 1, 0])
   }
   const customStyles2 = {
-    y: useTransform(scrollYProgress, [0, 0.3, 0.8, 1], [0, -150, -250, -500]),
+    y: useTransform(scrollYProgress, [0, 0.1, 0.5, 1], [0, -150, 20, 550]),
     opacity: useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0])
   }
 

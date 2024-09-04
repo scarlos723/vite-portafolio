@@ -4,7 +4,6 @@ interface ProjectCardProps {
   project: {
     title: string
     description: string
-    technology: string
     development: string
     scalability: string
     url: string
@@ -23,25 +22,14 @@ const ProjectCard = (props: ProjectCardProps) => {
   return (
     <div
       key={index}
-      className='min-h-[100vh] grid py-20 box-border items-center lg:grid-cols-[2fr_1fr] lg:gap-10 lg:items-start xl:grid-cols-2 xl:gap-20'
+      className='min-h-[100vh] grid py-20 box-border items-center lg:grid-cols-[2fr_1fr] lg:gap-20 lg:items-start xl:grid-cols-2 xl:gap-20'
     >
       <div>
-        <h2 className='text-3xl mb-2'>{project.title}</h2>
-        <p className='text-balance'>{project.description}</p>
-
-        <div className='grid grid-cols-2 my-10 gap-4 text-balance'>
-          <section>
-            <h3 className='text-xl mb-2'>Tecnologia</h3>
-            <p>{project.technology}</p>
-          </section>
-          <section>
-            <h3 className='text-xl mb-2'>Desarrollo</h3>
-            <p>{project.development}</p>
-          </section>
-          <section className='col-span-2'>
-            <h3 className='text-xl mb-2'>Escalabilidad</h3>
-            <p>{project.scalability}</p>
-          </section>
+        <h2 className='text-4xl mb-8'>{project.title}</h2>
+        <div className='flex flex-col gap-4'>
+          <p className='text-balance'>{project.description}</p>
+          <p>{project.development}</p>
+          <p>{project.scalability}</p>
         </div>
       </div>
       <article

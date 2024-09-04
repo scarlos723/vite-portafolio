@@ -34,8 +34,8 @@ export default function Skills() {
     window.addEventListener('resize', getWindowSize)
   }, [])
   return (
-    <>
-      <div className='absolute w-full min-h-[400px]'>
+    <div className='overflow-hidden'>
+      <div className='absolute container min-h-[400px]'>
         {' '}
         <Meteors></Meteors>
       </div>
@@ -62,8 +62,9 @@ export default function Skills() {
                   opacity: customStyles.opacity
                 }}
               >
-                Ingeniero en electronica y telecomunicaciones con experiencia en Development and IT
-                Operations (<strong>DEVOPS</strong>) y lider de proyectos <strong>FRONTEND</strong>.
+                Ingeniero en electronica y telecomunicaciones con experiencia como{' '}
+                <strong>DEVOPS</strong> (Development and IT Operations) y lider de proyectos{' '}
+                <strong>FRONTEND</strong>.
               </motion.p>
               <motion.p
                 className=' backdrop-blur-md'
@@ -118,6 +119,6 @@ export default function Skills() {
           </motion.section>
         </div>
       </section>
-    </>
+    </div>
   )
 }
