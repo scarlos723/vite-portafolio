@@ -19,7 +19,7 @@ export const useParallax = () => {
   }
   const bannerStyles = {
     y: useTransform(scrollYProgress, [0, 1], [0, 0]),
-    color: useTransform(scrollYProgress, [0, 0.1], ['#bad6ffd2', '#000000'])
+    color: useTransform(scrollYProgress, [0, 0.1], ['#e0e7ff', '#000000'])
   }
 
   const scaleUpSphere = {
