@@ -1,8 +1,5 @@
 {
-  "functions": {
-    "app/api/**/*.ts": {
-      "runtime": "@vercel/node@18"
-    }
-  },
-  "buildCommand": "npm run build"
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite"
 }
