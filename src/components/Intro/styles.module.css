@@ -47,3 +47,29 @@
     }
 }
 
+.sphere{
+  position: absolute;
+  z-index: 2;
+  bottom: -800px;
+  left: calc(50% - 600px);
+  width: 1200px;
+  height: 1200px;
+  border-radius: 50%;
+  mix-blend-mode: screen; 
+   background: radial-gradient( 
+    black 50%, 
+    #4922E5 60%,
+    #c956fb 66%, 
+    #ffffff 70%);
+  box-shadow: 
+    /* Sombras externas - luz rebotando hacia afuera */
+
+
+    /* Punto de luz más brillante - simula reflexión especular */
+    0px -30px 80px rgba(241, 202, 255, 0.488),  /* Luz principal arriba-izquierda */
+    
+    /* Sombras internas - profundidad y volumen */
+    inset -0px -0px 120px rgba(255, 255, 255, 0.626);      /* Sombra principal (abajo-derecha) */
+     /* Highlight sutil */
+
+}

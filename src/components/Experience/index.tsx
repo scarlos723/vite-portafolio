@@ -1,61 +1,63 @@
 import { OneTime } from '../Animations/OneTime'
 import { list } from './listExperience'
 import './styles.css'
-import circlesImg from '../../assets/images/circles.webp'
 const Experience = () => {
   return (
     <div className='relative'>
-      <div
-        className='w-full h-[100vh] my-20 absolute top-0 left-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed'
-        style={{
-          backgroundImage: `url(${circlesImg})`,
-          filter: 'blur(10px)',
-          backgroundSize: '120%'
-        }}
-      ></div>
       <div className='bg-black bg-opacity-60 backdrop-blur-2xl'>
         <section className='container relative z-10 containe min-h-[100vh]'>
-          <div>
-            <OneTime
-              className='text-white text-center mb-20'
-              initial={{ opacity: 0, y: 200 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 1 }}
-            >
-              <h1>Experiencia</h1>
-            </OneTime>
+          <div className='py-20'>
+            <h1>Experiencia</h1>
           </div>
           <div className='experience-card bg-black bg-opacity-70 hover:bg-opacity-100'>
-            <div className='grid lg:grid-cols-9 gap-4 p-2 lg:p-10 lg:gap-10'>
+            <div className='grid grid-cols-1 md:grid-cols-6 lg:grid-cols-8 gap-4 p-2 lg:p-10 lg:gap-6 auto-rows-auto'>
               {list.map((item, index) => (
                 <OneTime
+                  key={index}
                   initial={{ opacity: 0, y: 100, x: index % 2 === 0 ? 100 : -100 }}
                   animate={{ opacity: 1, y: 0, x: 0 }}
                   transition={{ delay: 0.2 * index, duration: 1 }}
-                  className={item.className}
+                  className={`${item.className} h-fit`}
                 >
                   <article
                     className={
-                      'text-balance box-content border border-gray-50 border-opacity-20 bg-opacity-10 rounded-xl p-10 lg:w-full '
+                      'group relative overflow-hidden text-balance border border-gray-600 border-opacity-40 bg-gradient-to-br from-gray-900/80 to-black/90 backdrop-blur-md rounded-2xl p-6 lg:p-8 h-full hover:border-blue-400/60 transition-all duration-500 hover:scale-[1.03] hover:shadow-xl hover:shadow-blue-500/20 hover:from-gray-800/90 hover:to-gray-900/90'
                     }
                   >
-                    <div className='grid lg:flex items-center gap-4'>
-                      <h4 className='text-left uppercase text-4xl'>{item.company}</h4>
-                      <div className='text-left leading-none'>
-                        <h5>{item.position}</h5>
-                        <small>{item.date}</small>
+                    {/* Efecto de brillo en hover */}
+                    <div className='absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out'></div>
+
+                    <div className='relative z-10 grid lg:flex items-start lg:items-center gap-4 mb-6'>
+                      <div className='flex-shrink-0'>
+                        <h4 className='text-left uppercase text-2xl lg:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent group-hover:from-blue-300 group-hover:to-purple-400 transition-all duration-300'>
+                          {item.company}
+                        </h4>
+                      </div>
+                      <div className='text-left leading-tight flex-grow'>
+                        <h5 className='text-lg font-semibold text-gray-200 group-hover:text-white transition-colors duration-300'>
+                          {item.position}
+                        </h5>
+                        <small className='text-blue-400 font-medium text-sm group-hover:text-blue-300 transition-colors duration-300'>
+                          {item.date}
+                        </small>
                       </div>
                     </div>
-                    <ul className='list-disc mt-10'>
-                      {item.responsabilities.map((responsability, index) => (
-                        <li
-                          className='text-left'
-                          key={index}
-                        >
-                          <p>{responsability}</p>
-                        </li>
-                      ))}
-                    </ul>
+
+                    <div className='relative z-10'>
+                      <ul className='space-y-3'>
+                        {item.responsabilities.map((responsability, index) => (
+                          <li
+                            className='flex items-start gap-3 text-left group/item'
+                            key={index}
+                          >
+                            <span className='flex-shrink-0 w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mt-2 group-hover/item:scale-125 transition-transform duration-200'></span>
+                            <p className='text-gray-300 leading-relaxed group-hover:text-gray-100 transition-colors duration-300'>
+                              {responsability}
+                            </p>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </article>
                 </OneTime>
               ))}

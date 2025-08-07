@@ -13,18 +13,24 @@ export const useParallax = () => {
   const textStyles = {
     color: useTransform(scrollYProgress, [0, 0.1], ['#000000', '#ffffff']),
     y: useTransform(scrollYProgress, [0, 0.1, 0.2, 0.7], [0, 150, 250, 1000]),
-    opacity: useTransform(scrollYProgress, [0, 0.2, 0.5], [1, 1, 0]),
+    opacity: useTransform(scrollYProgress, [0, 0.6, 1], [1, 1, 0]),
     opacityIcon: useTransform(scrollYProgress, [0, 0.3, 0.7], [1, 0, 0]),
     starColor: useTransform(scrollYProgress, [0, 0.2], ['rgba(221, 208, 255, 0)', '#ffffff'])
   }
   const bannerStyles = {
     y: useTransform(scrollYProgress, [0, 1], [0, 0]),
-    color: useTransform(scrollYProgress, [0, 0.1], ['#d0beffd2', '#000000'])
+    color: useTransform(scrollYProgress, [0, 0.1], ['#bad6ffd2', '#000000'])
+  }
+
+  const scaleUpSphere = {
+    y: useTransform(scrollYProgress, [0, 0.1], [1, 1.5]),
+    scale: useTransform(scrollYProgress, [0, 0.1], [1, 1.8])
   }
 
   return {
     homeBannerRef,
     bannerStyles,
-    textStyles
+    textStyles,
+    scaleUpSphere
   }
 }
