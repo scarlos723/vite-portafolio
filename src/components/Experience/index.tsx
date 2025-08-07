@@ -3,7 +3,7 @@ import { list } from './listExperience'
 import './styles.css'
 const Experience = () => {
   return (
-    <div className='relative'>
+    <div className='relative max-w-screen overflow-hidden'>
       <div className='bg-black bg-opacity-60 backdrop-blur-2xl'>
         <section className='container relative z-10 containe min-h-[100vh]'>
           <div className='py-20'>
