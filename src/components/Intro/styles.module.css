@@ -100,15 +100,3 @@
   }
 }
 
-/* Estilos para pantallas menores de 480px */
-@media screen and (max-width: 479px) {
-  .sphere {
-    width: 400px;
-    height: 400px;
-    left: calc(50% - 200px);
-    bottom: -300px;
-    box-shadow: 
-      0px -10px 30px rgba(241, 202, 255, 0.3),
-      inset -0px -0px 60px rgba(255, 255, 255, 0.35);
-  }
-}
