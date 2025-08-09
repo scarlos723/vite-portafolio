@@ -1,21 +1,21 @@
-import retri from '../../assets/images/retri.png'
-import bpolabs from '../../assets/images/bpolabs.png'
-import { SiNextdotjs, SiTailwindcss, SiVite } from 'react-icons/si'
 import { DiReact } from 'react-icons/di'
+import { SiNextdotjs, SiTailwindcss, SiVite } from 'react-icons/si'
 import { TbBrandTypescript } from 'react-icons/tb'
+import bpolabs from '../../assets/images/bpolabs.png'
+import retri from '../../assets/images/retri.png'
 export const listProjects = [
   {
     title: 'Retri Web App',
-    description: `Retri es un producto emergente que está actualmente en producción 
-    y se usa para el alquiler de maquinaria pesada en Colombia. 
-    Al ser una startup, hay muchos cambios en la lógica y estructura del negocio.`,
+    description: `Plataforma web para el alquiler de maquinaria pesada en Colombia. 
+    Como startup en producción, enfrenté el desafío de desarrollar una solución 
+    escalable que se adaptara a los constantes cambios del negocio.`,
 
-    development: `Next.js se tornó algo lento y migramos todo el proyecto 
-    a Vite.js, mejorando los tiempos de desarrollo.`,
-    scalability: `El proyecto se hizo bastante grande, fue necesario definir una 
-    arquitectura de archivos, optando por usar una arquitectura en capas (Clean Architecture), 
-    que nos permitiera ajustarnos a los requerimientos del proyecto 
-    y mantener los archivos de manera ordenada.`,
+    development: `Migré el proyecto de Next.js a Vite.js para optimizar los tiempos 
+    de desarrollo y mejorar la experiencia del equipo.`,
+
+    scalability: `Implementé Clean Architecture para manejar el crecimiento del proyecto, 
+    organizando el código en capas que facilitaran el mantenimiento y la escalabilidad 
+    a largo plazo.`,
     image: retri,
     logo: (
       <svg
@@ -72,17 +72,16 @@ export const listProjects = [
   },
   {
     title: 'BPO2B Labs',
-    description: `BPO2B Labs es el área de desarrollo tecnológico 
-    de una empresa experta en soluciones de 
-    recursos multifuncionales. Proporcionamos servicios de personal 
-    y consultoría para la adquisición de clientes, el back office y la garantía de ingresos.`,
+    description: `Sitio web corporativo para el área de desarrollo tecnológico de una 
+    empresa especializada en soluciones de recursos multifuncionales y consultoría 
+    para adquisición de clientes.`,
 
-    development: `El desarrollo de este proyecto ha sido bastante interesante, ya que
-    he tenido la oportunidad de trabajar con un equipo de desarrollo
-    grande, y he aprendido mucho de ellos.`,
-    scalability: `Uno de los retos más grandes fue adaptarme 
-    a la estructura de archivos en Next.js 14, éste 
-    sigue un patrón definido por el framework que ayuda a mantener el proyecto ordenado y escalable.`,
+    development: `Colaboré con un equipo de desarrollo experimentado, lo que me permitió 
+    aprender mejores prácticas y metodologías de trabajo en equipo.`,
+
+    scalability: `Evalué y seleccioné las mejores tecnologías para el proyecto. 
+    Migré de Next.js a Vite.js para mejorar significativamente el performance 
+    y desplegué el sitio usando CloudFront de AWS para optimizar la distribución global.`,
     image: bpolabs,
     logo: (
       <svg

@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Seo title='Carlos Sanchez' />
-      <main className=''>
+      <main>
         <Intro />
         <Experience />
         <Skills />

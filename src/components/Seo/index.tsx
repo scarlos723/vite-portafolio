@@ -17,7 +17,12 @@ interface Seo {
   url: string
 }
 
-export default function Seo({ title = 'Home', description = '', imageUrl, ...props }: SeoProps) {
+export default function Seo({
+  title = 'Carlos Sánchez',
+  description = 'Desarrollador Full Stack especializado en React, TypeScript y tecnologías cloud. Experiencia en arquitecturas escalables y DevOps.',
+  imageUrl,
+  keywords
+}: SeoProps) {
   //const { pathname } = useLocation()
   const url = 'https://vite-portafolio-ten.vercel.app'
 
@@ -32,7 +37,7 @@ export default function Seo({ title = 'Home', description = '', imageUrl, ...pro
   const defaultKeywords = [
     'SRE',
     'Developer',
-    'Desarrollardor tiempo completo',
+    'Desarrollador tiempo completo',
     'DevOps',
     'Backend',
     'Desarrollo Web',
@@ -60,14 +65,14 @@ export default function Seo({ title = 'Home', description = '', imageUrl, ...pro
       />
       <meta
         name='keywords'
-        content={props?.keywords ? JSON.stringify(props.keywords) : JSON.stringify(defaultKeywords)}
+        content={keywords ? keywords.join(', ') : defaultKeywords.join(', ')}
       />
       <OpenGraph seo={seo}></OpenGraph>
       <TwitterCard
         seo={seo}
         tagUser='@723Cartman'
       ></TwitterCard>
-      <LinkedIn seo={seo}></LinkedIn>
+      <LinkedIn />
     </Helmet>
   )
 }
@@ -150,30 +155,17 @@ const TwitterCard = (props: { seo: Seo; tagUser: string }) => {
   )
 }
 
-const LinkedIn = (props: { seo: Seo }) => {
-  const { seo } = props
+const LinkedIn = () => {
   return (
     <>
-      {/* LinkedIn Card tags */}
+      {/* LinkedIn específico - evita duplicar meta tags de OpenGraph */}
       <meta
-        property='og:title'
-        content={seo.title}
-      />
-      <meta
-        property='og:description'
-        content={seo.description}
-      />
-      <meta
-        property='og:url'
+        property='article:author'
         content='https://www.linkedin.com/in/carlos-sanchez-69b277196/'
       />
       <meta
-        property='og:image'
-        content='URL_TO_YOUR_IMAGE'
-      />
-      <meta
-        property='og:site_name'
-        content='LinkedIn'
+        name='author'
+        content='Carlos Sanchez'
       />
     </>
   )

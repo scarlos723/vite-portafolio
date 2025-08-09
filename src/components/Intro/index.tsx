@@ -11,7 +11,7 @@ const Intro = () => {
   return (
     <>
       <motion.div
-        className='absolute z-[0] top-0 min-h-[100vh] h-[100vh] w-full overflow-hidden'
+        className='absolute z-[0] top-0 min-h-[100vh] h-[100vh] w-full '
         style={{
           y: bannerStyles.y,
           backgroundColor: bannerStyles.color
