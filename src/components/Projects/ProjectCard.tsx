@@ -17,17 +17,12 @@ interface ProjectCardProps {
 const ProjectCard = (props: ProjectCardProps) => {
   const { project, index, compact = false } = props
 
-  function goTo(url: string) {
-    window.open(url)
-  }
-
   // Versión compacta
   if (compact) {
     return (
       <article
         key={index}
         className='group relative overflow-hidden bg-gradient-to-br from-gray-900/90 to-black/95 backdrop-blur-md rounded-2xl p-4 border border-gray-600/40 hover:border-purple-400/60 transition-all duration-500 hover:scale-[1.02] hover:shadow-xl hover:shadow-purple-500/25 cursor-pointer max-w-sm mx-auto'
-        onClick={() => goTo(project.url)}
       >
         {/* Efecto de brillo en hover */}
         <div className='absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out'></div>
@@ -57,16 +52,6 @@ const ProjectCard = (props: ProjectCardProps) => {
 
           {/* Info section más compacta */}
           <section className='relative bg-gradient-to-r from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-lg p-3 border border-gray-700/50 group-hover:border-purple-400/30 transition-all duration-300'>
-            <a
-              className='block text-sm font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent group-hover:from-purple-300 group-hover:to-blue-300 transition-all duration-300 mb-3 text-center'
-              href={project.url}
-              target='_blank'
-              rel='noopener noreferrer'
-              onClick={(e) => e.stopPropagation()}
-            >
-              {project.domain}
-            </a>
-
             {/* Título de tecnologías */}
             <h4 className='text-xs font-semibold text-gray-400 text-center mb-2'>
               Tecnologías Usadas
@@ -122,10 +107,7 @@ const ProjectCard = (props: ProjectCardProps) => {
           </div>
         </div>
       </div>
-      <article
-        className='group relative overflow-hidden bg-gradient-to-br from-gray-900/90 to-black/95 backdrop-blur-md rounded-3xl p-6 border border-gray-600/40 hover:border-purple-400/60 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/25 cursor-pointer'
-        onClick={() => goTo(project.url)}
-      >
+      <article className='group relative overflow-hidden bg-gradient-to-br from-gray-900/90 to-black/95 backdrop-blur-md rounded-3xl p-6 border border-gray-600/40 hover:border-purple-400/60 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/25 cursor-pointer'>
         {/* Efecto de brillo en hover */}
         <div className='absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out'></div>
 
@@ -136,7 +118,7 @@ const ProjectCard = (props: ProjectCardProps) => {
           </div>
 
           {/* Image section */}
-          <div className='relative overflow-hidden rounded-2xl mb-6 group-hover:shadow-lg group-hover:shadow-purple-500/20 transition-all duration-300'>
+          <div className='relative aspect-video min-h-[300px] overflow-hidden rounded-2xl mb-6 group-hover:shadow-lg group-hover:shadow-purple-500/20 transition-all duration-300'>
             <img
               src={project.image}
               alt={project.title}
@@ -147,16 +129,6 @@ const ProjectCard = (props: ProjectCardProps) => {
 
           {/* Info section */}
           <section className='relative bg-gradient-to-r from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 group-hover:border-purple-400/30 transition-all duration-300'>
-            <a
-              className='block text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent group-hover:from-purple-300 group-hover:to-blue-300 transition-all duration-300 mb-4'
-              href={project.url}
-              target='_blank'
-              rel='noopener noreferrer'
-              onClick={(e) => e.stopPropagation()}
-            >
-              {project.domain}
-            </a>
-
             {/* Título de tecnologías */}
             <h4 className='text-sm font-semibold text-gray-400 text-center mb-4'>
               Tecnologías Usadas
