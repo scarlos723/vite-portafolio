@@ -35,8 +35,7 @@ export default function Skills() {
   }, [])
   return (
     <div className='overflow-hidden grid max-w-screen'>
-      <div className='absolute overflow-hidden container min-h-[400px]'>
-        {' '}
+      <div className='absolute grid w-screen min-h-40 min-w-[500px]'>
         <Meteors></Meteors>
       </div>
       <section
@@ -44,7 +43,7 @@ export default function Skills() {
         className='container relative min-h-[100vh] z-[100] py-20'
       >
         <motion.h1
-          className='text-center mb-20 text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent'
+          className='text-center pb-20 text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent'
           style={{
             y: titleStyles.y,
             opacity: titleStyles.opacity
@@ -54,18 +53,18 @@ export default function Skills() {
         </motion.h1>
         <div className='grid gap-20 lg:grid-cols-2 items-center'>
           <section className='grid'>
-            <div className='group relative overflow-hidden bg-gradient-to-br from-purple-900/70 to-gray-900/80 backdrop-blur-md rounded-3xl p-8 border border-gray-600/40 hover:border-purple-400/60 transition-all duration-500 hover:scale-[1.02] hover:shadow-xl hover:shadow-purple-500/20'>
+            <motion.div
+              className='group relative overflow-hidden bg-gradient-to-br from-purple-900/70 to-gray-900/80 backdrop-blur-md rounded-3xl p-8 border border-gray-600/40 hover:border-purple-400/60 transition-all duration-500 hover:scale-[1.02] hover:shadow-xl hover:shadow-purple-500/20'
+              style={{
+                y: customStyles.y,
+                opacity: customStyles.opacity
+              }}
+            >
               {/* Efecto de brillo en hover */}
               <div className='absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out'></div>
 
               <div className='relative z-10 grid gap-6 rounded-lg my-auto'>
-                <motion.p
-                  className='text-lg leading-relaxed text-gray-300 group-hover:text-gray-100 transition-colors duration-300'
-                  style={{
-                    y: customStyles.y,
-                    opacity: customStyles.opacity
-                  }}
-                >
+                <p className='text-lg leading-relaxed text-gray-300 group-hover:text-gray-100 transition-colors duration-300'>
                   Ingeniero en{' '}
                   <span className='text-blue-400 font-semibold'>
                     electrónica y telecomunicaciones
@@ -79,34 +78,22 @@ export default function Skills() {
                     FRONTEND
                   </span>
                   .
-                </motion.p>
-                <motion.p
-                  className='text-lg leading-relaxed text-gray-300 group-hover:text-gray-100 transition-colors duration-300'
-                  style={{
-                    y: customStyles.y,
-                    opacity: customStyles.opacity
-                  }}
-                >
+                </p>
+                <p className='text-lg leading-relaxed text-gray-300 group-hover:text-gray-100 transition-colors duration-300'>
                   Me motiva el{' '}
                   <span className='text-yellow-400 font-semibold'>aprendizaje constante</span> y los
                   retos. Me mantengo al tanto de herramientas modernas para la creación y despliegue
                   de aplicaciones web o crear soluciones relacionadas.
-                </motion.p>
-                <motion.p
-                  className='text-lg leading-relaxed text-gray-300 group-hover:text-gray-100 transition-colors duration-300'
-                  style={{
-                    y: customStyles.y,
-                    opacity: customStyles.opacity
-                  }}
-                >
+                </p>
+                <p className='text-lg leading-relaxed text-gray-300 group-hover:text-gray-100 transition-colors duration-300'>
                   Bienvenido a mi portafolio, aquí podrás encontrar información sobre mis{' '}
                   <span className='text-cyan-400 font-semibold'>habilidades</span>, las{' '}
                   <span className='text-emerald-400 font-semibold'>tecnologías</span> que conozco y
                   algunos <span className='text-orange-400 font-semibold'>proyectos</span> en los
                   que he trabajado.
-                </motion.p>
+                </p>
               </div>
-            </div>
+            </motion.div>
           </section>
           <motion.section className='grid w-full place-items-center'>
             <div className='relative'>

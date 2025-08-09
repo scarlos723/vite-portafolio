@@ -55,6 +55,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   width: 100%;
+  overflow-x: hidden;
   /* Optimización para Safari/iPhone */
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
@@ -103,8 +104,6 @@ button:focus-visible {
   html, body {
     overflow-x: hidden;
   }
-  
-
   
 
 }
