@@ -1,7 +1,16 @@
 import { DiReact } from 'react-icons/di'
-import { SiNextdotjs, SiTailwindcss, SiVite } from 'react-icons/si'
+import { FaGolang } from 'react-icons/fa6'
+import {
+  SiAwsfargate,
+  SiNextdotjs,
+  SiOpensearch,
+  SiTailwindcss,
+  SiTerraform,
+  SiVite
+} from 'react-icons/si'
 import { TbBrandTypescript } from 'react-icons/tb'
 import bpolabs from '../../assets/images/bpolabs.png'
+import connectupimg from '../../assets/images/connectup.png'
 import retri from '../../assets/images/retri.png'
 export const listProjects = [
   {
@@ -11,7 +20,9 @@ export const listProjects = [
     escalable que se adaptara a los constantes cambios del negocio.`,
 
     development: `Migré el proyecto de Next.js a Vite.js para optimizar los tiempos 
-    de desarrollo y mejorar la experiencia del equipo.`,
+    de desarrollo y mejorar la experiencia del equipo. Además, realicé la migración 
+    completa del código de JavaScript a TypeScript para reducir los errores de tipado 
+    y mejorar la robustez del código.`,
 
     scalability: `Implementé Clean Architecture para manejar el crecimiento del proyecto, 
     organizando el código en capas que facilitaran el mantenimiento y la escalabilidad 
@@ -67,8 +78,12 @@ export const listProjects = [
       </svg>
     ),
     url: 'https://www.retri.app/',
-    domain: 'retri.app',
-    tech_icons: [<DiReact size={32} />, <SiVite size={32} />, <SiTailwindcss size={32} />]
+    domain: 'www.retri.app',
+    tech_icons: [
+      { icon: <DiReact size={32} />, name: 'React' },
+      { icon: <SiVite size={32} />, name: 'Vite' },
+      { icon: <SiTailwindcss size={32} />, name: 'Tailwind CSS' }
+    ]
   },
   {
     title: 'BPO2B Labs',
@@ -85,7 +100,7 @@ export const listProjects = [
     image: bpolabs,
     logo: (
       <svg
-        className='bg-white rounded-xl w-[100px] p-2 md:w-[120px]'
+        className='bg-white rounded-xl w-full h-full'
         xmlns='http://www.w3.org/2000/svg'
         fill='none'
         viewBox='0 0 134 42'
@@ -101,12 +116,37 @@ export const listProjects = [
       </svg>
     ),
     url: 'https://bpolabsolutions.com/',
-    domain: 'bpolabsolutions.com',
+    domain: 'www.bpolabsolutions.com',
     tech_icons: [
-      <DiReact size={32} />,
-      <TbBrandTypescript size={32} />,
-      <SiNextdotjs size={32} />,
-      <SiTailwindcss size={32} />
+      { icon: <DiReact size={32} />, name: 'React' },
+      { icon: <TbBrandTypescript size={32} />, name: 'TypeScript' },
+      { icon: <SiNextdotjs size={32} />, name: 'Next.js' },
+      { icon: <SiTailwindcss size={32} />, name: 'Tailwind CSS' }
+    ]
+  },
+  {
+    title: 'Connectup',
+    description: `Dashboard empresarial integral para la gestión de recursos humanos y 
+    operaciones corporativas. Incluye control de asistencia, gestión de vacaciones, 
+    asignación de roles, administración multi-empresa y módulos de IA para 
+    análisis y calificación de llamadas de operadores.`,
+
+    development: `Como DevOps/Infrastructure Engineer, soy responsable del despliegue 
+    y mantenimiento de toda la infraestructura que soporta esta aplicación empresarial. 
+    Gestiono múltiples servicios, bases de datos y sistemas de comunicación en tiempo real.`,
+
+    scalability: `Diseñé e implementé una arquitectura en la nube escalable para soportar 
+    múltiples empresas cliente, integrando servicios de IA, sistemas de tracking en tiempo real 
+    y garantizando alta disponibilidad para operaciones empresariales críticas.`,
+    image: connectupimg,
+    logo: <h3 className='font-extrabold text-3xl'>ConnectUp</h3>,
+    url: 'https://connectup.cloud/',
+    domain: 'www.connectup.cloud',
+    tech_icons: [
+      { icon: <SiTerraform size={32} />, name: 'Terraform' },
+      { icon: <SiOpensearch size={32} />, name: 'OpenSearch' },
+      { icon: <SiAwsfargate size={32} />, name: 'AWS Fargate' },
+      { icon: <FaGolang size={32} />, name: 'Go' }
     ]
   }
 ]
