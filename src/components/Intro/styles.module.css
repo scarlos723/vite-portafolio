@@ -74,29 +74,18 @@
 
 }
 
-/* Estilos responsivos para pantallas menores de 1024px */
-@media screen and (max-width: 1023px) {
-  .sphere {
-    width: 800px;
-    height: 800px;
-    left: calc(50% - 400px);
-    bottom: -600px;
-    box-shadow: 
-      0px -20px 60px rgba(241, 202, 255, 0.4),
-      inset -0px -0px 100px rgba(255, 255, 255, 0.5);
-  }
-}
+
 
 /* Estilos para pantallas menores de 768px */
 @media screen and (max-width: 767px) {
   .sphere {
-    width: 600px;
-    height: 600px;
-    left: calc(50% - 300px);
-    bottom: -450px;
-    box-shadow: 
-      0px -15px 40px rgba(241, 202, 255, 0.35),
-      inset -0px -0px 80px rgba(255, 255, 255, 0.4);
-  }
+      width: 800px;
+      height: 800px;
+      left: calc(50% - 400px);
+      bottom: -480px;
+      box-shadow: 
+        0px -20px 60px rgba(241, 202, 255, 0.4),
+        inset -0px -0px 100px rgba(255, 255, 255, 0.5);
+    }
 }
 
