@@ -3,12 +3,12 @@ import { list } from './listExperience'
 import './styles.css'
 const Experience = () => {
   return (
-    <div className='relative max-w-screen overflow-hidden pb-2  bg-black/5 backdrop-blur-xl'>
+    <div className='relative max-w-screen overflow-hidden pb-2 bg-black/5 backdrop-blur-xl'>
       <div>
         <section className='container relative z-10 containe min-h-[100vh]'>
-          <h1 className='mt-20 text-xl lg:text-5xl text-center font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-20'>
+          <h2 className='mt-20 !text-2xl sm:!text-3xl md:!text-4xl lg:!text-5xl text-center font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-20'>
             Experiencia
-          </h1>
+          </h2>
 
           <div className='experience-card bg-black bg-opacity-70 hover:bg-opacity-100'>
             <div className='grid grid-cols-1 md:grid-cols-6 lg:grid-cols-8 gap-4 p-2 lg:p-10 lg:gap-6 auto-rows-auto'>

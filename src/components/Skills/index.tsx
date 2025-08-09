@@ -43,7 +43,7 @@ export default function Skills() {
         className='container relative min-h-[100vh] z-[100] py-20'
       >
         <motion.h2
-          className='text-center pb-20 text-5xl lg:text-5xl xl:pt-10 font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent'
+          className='text-center pb-20 text-2xl lg:text-5xl xl:pt-10 font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent'
           style={{
             y: titleStyles.y,
             opacity: titleStyles.opacity
@@ -64,7 +64,7 @@ export default function Skills() {
               <div className='absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out'></div>
 
               <div className='relative z-10 grid gap-6 rounded-lg my-auto'>
-                <p className='text-xl leading-relaxed text-gray-200 group-hover:text-gray-100 transition-colors duration-300'>
+                <p className='text-2xl leading-relaxed text-gray-200 group-hover:text-gray-100 transition-colors duration-300'>
                   <span className='text-white font-semibold'>
                     Ingeniero en Electrónica y Telecomunicaciones
                   </span>{' '}

@@ -41,9 +41,11 @@ const Intro = () => {
                 color: textStyles.color,
                 opacity: textStyles.opacity
               }}
-              className='text-xl lg:text-5xl font-bold grid gap-2 pt-10 '
+              className=' font-bold grid gap-2 pt-10 '
             >
-              <h1 className='backdrop-blur-sm text-center m-auto rounded-2xl'>Carlos Sánchez</h1>
+              <h1 className='backdrop-blur-sm text-4xl lg:text-5xl text-center m-auto rounded-2xl'>
+                Carlos Sánchez
+              </h1>
               <h2 className='backdrop-blur-sm  text-xl  m-auto rounded-2xl text-center'>
                 Software Developer, DevOps & <br /> Cloud Infrastructure Engineer
                 <br />
