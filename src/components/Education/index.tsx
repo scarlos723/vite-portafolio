@@ -32,9 +32,9 @@ const Education = () => {
   return (
     <section className='py-20 '>
       <div className='container'>
-        <h1 className='text-center mb-20 text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent'>
+        <h2 className='text-center mb-20 text-5xl lg:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent'>
           Formación
-        </h1>
+        </h2>
         <div className='grid gap-10 lg:gap-20 md:grid-cols-2 items-start max-w-7xl mx-auto'>
           <div>
             <section className='group relative overflow-hidden bg-gradient-to-br from-gray-900/80 to-black/90 backdrop-blur-md rounded-3xl p-6 lg:p-8 border border-gray-600/40 hover:border-blue-400/60 transition-all duration-500 hover:scale-[1.02] hover:shadow-xl hover:shadow-blue-500/20 max-w-full'>

@@ -23,7 +23,7 @@ const ProjectCard = (props: ProjectCardProps) => {
       className='min-h-[100vh] grid py-20 box-border items-center lg:grid-cols-[2fr_1fr] lg:gap-20 lg:items-start xl:grid-cols-2 xl:gap-20'
     >
       <div className='space-y-6'>
-        <h2 className='text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-8'>
+        <h2 className='text-5xl lg:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-8'>
           {project.title}
         </h2>
         <div className='flex flex-col gap-6'>

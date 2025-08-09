@@ -35,22 +35,22 @@ export default function Skills() {
   }, [])
   return (
     <div className='overflow-hidden grid max-w-screen'>
-      <div className='absolute grid w-screen min-h-40 min-w-[500px]'>
+      <div className='absolute grid w-screen min-h-40 min-w-[500px] '>
         <Meteors></Meteors>
       </div>
       <section
         ref={refContainer}
         className='container relative min-h-[100vh] z-[100] py-20'
       >
-        <motion.h1
-          className='text-center pb-20 text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent'
+        <motion.h2
+          className='text-center pb-20 text-5xl lg:text-5xl xl:pt-10 font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent'
           style={{
             y: titleStyles.y,
             opacity: titleStyles.opacity
           }}
         >
           Habilidades y tecnologías
-        </motion.h1>
+        </motion.h2>
         <div className='grid gap-20 lg:grid-cols-2 items-center'>
           <section className='grid'>
             <motion.div
@@ -64,34 +64,27 @@ export default function Skills() {
               <div className='absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out'></div>
 
               <div className='relative z-10 grid gap-6 rounded-lg my-auto'>
-                <p className='text-lg leading-relaxed text-gray-300 group-hover:text-gray-100 transition-colors duration-300'>
-                  Ingeniero en{' '}
-                  <span className='text-blue-400 font-semibold'>
-                    electrónica y telecomunicaciones
+                <p className='text-xl leading-relaxed text-gray-200 group-hover:text-gray-100 transition-colors duration-300'>
+                  <span className='text-white font-semibold'>
+                    Ingeniero en Electrónica y Telecomunicaciones
                   </span>{' '}
-                  con experiencia como{' '}
-                  <span className='bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent font-bold'>
-                    DEVOPS
-                  </span>{' '}
-                  (Development and IT Operations) y líder de proyectos{' '}
-                  <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent font-bold'>
-                    FRONTEND
-                  </span>
-                  .
+                  con experiencia especializada en <strong>DevOps</strong> y liderazgo de proyectos{' '}
+                  <strong>Frontend</strong>.
                 </p>
+
                 <p className='text-lg leading-relaxed text-gray-300 group-hover:text-gray-100 transition-colors duration-300'>
-                  Me motiva el{' '}
-                  <span className='text-yellow-400 font-semibold'>aprendizaje constante</span> y los
-                  retos. Me mantengo al tanto de herramientas modernas para la creación y despliegue
-                  de aplicaciones web o crear soluciones relacionadas.
+                  Me apasiona el <strong>aprendizaje constante</strong> y enfrentar nuevos desafíos
+                  tecnológicos. Mantengo un enfoque actualizado en herramientas modernas para el
+                  desarrollo y despliegue de aplicaciones web escalables.
                 </p>
-                <p className='text-lg leading-relaxed text-gray-300 group-hover:text-gray-100 transition-colors duration-300'>
-                  Bienvenido a mi portafolio, aquí podrás encontrar información sobre mis{' '}
-                  <span className='text-cyan-400 font-semibold'>habilidades</span>, las{' '}
-                  <span className='text-emerald-400 font-semibold'>tecnologías</span> que conozco y
-                  algunos <span className='text-orange-400 font-semibold'>proyectos</span> en los
-                  que he trabajado.
-                </p>
+
+                <div className='pt-4 border-t border-gray-600/30'>
+                  <p className='text-lg leading-relaxed text-gray-300 group-hover:text-gray-100 transition-colors duration-300'>
+                    En este portafolio encontrarás mis <strong>habilidades técnicas</strong>, las{' '}
+                    <strong>tecnologías</strong> que domino y los <strong>proyectos</strong> que
+                    definen mi experiencia profesional.
+                  </p>
+                </div>
               </div>
             </motion.div>
           </section>
