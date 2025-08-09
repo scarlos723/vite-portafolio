@@ -1,27 +1,43 @@
 import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import Meteors from '../Animations/Meteors'
 import { TECHNOLOGIES } from './list'
 import styles from './styles.module.css'
 import { useParallax } from './useParallax'
 export default function Skills() {
   const [radio, setRadio] = useState(120)
+  const [positions, setPositions] = useState<{ x: number; y: number }[]>([])
   const { customStyles, titleStyles, refContainer } = useParallax()
 
-  function getOrbitPosition(index: number) {
-    const angleinDegrees = (index / TECHNOLOGIES.length) * 720
-    const angleInRads = (angleinDegrees * Math.PI) / 180
+  // Función sincrónica para calcular posicionescc
+  const calculateOrbitPosition = useCallback(
+    (index: number, variationSeed: number) => {
+      const angleinDegrees = (index / TECHNOLOGIES.length) * 720
+      const angleInRads = (angleinDegrees * Math.PI) / 180
 
-    const newRadio = angleinDegrees > 360 ? radio - 80 : radio
-    //console.log(angleinDegrees)
-    const randomValue = Math.random() * 100
-    console.log(randomValue)
+      const newRadio = angleinDegrees > 360 ? radio - 80 : radio
 
-    const radius = randomValue + newRadio
-    const x = Math.cos(angleInRads) * radius
-    const y = Math.sin(angleInRads) * radius
-    return { x, y }
-  }
+      // Usar seed para variación consistente pero pseudo-random
+      const variation = (variationSeed % 50) + 20 // Entre 20 y 70
+      const radius = variation + newRadio
+
+      const x = Math.cos(angleInRads) * radius
+      const y = Math.sin(angleInRads) * radius
+      return { x, y }
+    },
+    [radio]
+  )
+
+  // Generar posiciones una sola vez
+  useEffect(() => {
+    const newPositions = TECHNOLOGIES.map((_, index) => {
+      // Crear un seed pseudo-random basado en el index
+      const seed = (index * 17 + 43) % 100
+      return calculateOrbitPosition(index, seed)
+    })
+    setPositions(newPositions)
+  }, [radio, calculateOrbitPosition])
+
   function getWindowSize() {
     if (window.innerWidth <= 768) {
       setRadio(120)
@@ -94,30 +110,43 @@ export default function Skills() {
               <div className='absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-pink-500/10 rounded-full blur-3xl'></div>
 
               <div className={styles['halo']}>
-                {TECHNOLOGIES.map((tech, index) => (
-                  <motion.div
-                    key={index}
-                    className={`${styles['tech-item']} group/tech`}
-                    whileInView={{ ...getOrbitPosition(index) }}
-                    transition={{
-                      delay: Math.random() * index * 0.05,
-                      type: 'spring',
-                      stiffness: 50,
-                      damping: 5
-                    }}
-                    whileHover={{
-                      scale: 1.2,
-                      transition: { duration: 0.3 }
-                    }}
-                  >
-                    <div className='relative z-10 size-8'>{tech.icon}</div>
-                    <div
-                      className={`${styles['tech-name']} group-hover/tech:opacity-100 bg-gradient-to-r from-gray-800/90 to-black/90 backdrop-blur-md border border-gray-600/50 group-hover/tech:border-purple-400/50 transition-all duration-300`}
-                    >
-                      <p className='text-white font-bold text-sm whitespace-nowrap'>{tech.name}</p>
-                    </div>
-                  </motion.div>
-                ))}
+                {TECHNOLOGIES.map(
+                  (tech, index) =>
+                    positions[index] && (
+                      <motion.div
+                        key={index}
+                        className={`${styles['tech-item']} group/tech`}
+                        initial={{ x: 0, y: 0, opacity: 0, scale: 0 }}
+                        whileInView={{
+                          x: positions[index].x,
+                          y: positions[index].y,
+                          opacity: 1,
+                          scale: 1
+                        }}
+                        viewport={{ once: true, margin: '-100px' }}
+                        transition={{
+                          delay: index * 0.08,
+                          type: 'spring',
+                          stiffness: 120,
+                          damping: 15,
+                          duration: 0.6
+                        }}
+                        whileHover={{
+                          scale: 1.2,
+                          transition: { duration: 0.2 }
+                        }}
+                      >
+                        <div className='relative z-10 size-8'>{tech.icon}</div>
+                        <div
+                          className={`${styles['tech-name']} group-hover/tech:opacity-100 bg-gradient-to-r from-gray-800/90 to-black/90 backdrop-blur-md border border-gray-600/50 group-hover/tech:border-purple-400/50 transition-all duration-300`}
+                        >
+                          <p className='text-white font-bold text-sm whitespace-nowrap'>
+                            {tech.name}
+                          </p>
+                        </div>
+                      </motion.div>
+                    )
+                )}
               </div>
 
               {/* Indicador central */}
