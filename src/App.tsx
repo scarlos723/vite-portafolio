@@ -8,7 +8,7 @@ import Skills from "./components/Skills";
 function App() {
   return (
     <main>
-      <Seo title="Mi Portafolio, desarrollador de software con mas de 10 años de experiencia" />
+      <Seo title="Mi Portafolio - Desarrollador de software con más de 10 años de experiencia" />
       {/* <Header /> */}
       <Banner />
       <Experience />
