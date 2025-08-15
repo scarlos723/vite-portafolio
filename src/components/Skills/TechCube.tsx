@@ -277,13 +277,26 @@ export const TechCube: React.FC<TechCubeProps> = ({
     plane.receiveShadow = true;
     scene.add(plane);
 
-    // Event handlers para el drag
+    // Event handlers para el drag (mouse y touch)
     const handleMouseDown = (event: MouseEvent) => {
       isDraggingRef.current = true;
       previousMousePositionRef.current = {
         x: event.clientX,
         y: event.clientY,
       };
+    };
+
+    const handleTouchStart = (event: TouchEvent) => {
+      if (event.touches.length === 1) {
+        isDraggingRef.current = true;
+        const touch = event.touches[0];
+        previousMousePositionRef.current = {
+          x: touch.clientX,
+          y: touch.clientY,
+        };
+        // Prevenir scroll en móviles
+        event.preventDefault();
+      }
     };
 
     const handleMouseMove = (event: MouseEvent) => {
@@ -305,7 +318,40 @@ export const TechCube: React.FC<TechCubeProps> = ({
       };
     };
 
+    const handleTouchMove = (event: TouchEvent) => {
+      if (
+        !isDraggingRef.current ||
+        !previousMousePositionRef.current ||
+        event.touches.length !== 1
+      )
+        return;
+
+      const touch = event.touches[0];
+      const deltaX = touch.clientX - previousMousePositionRef.current.x;
+      const deltaY = touch.clientY - previousMousePositionRef.current.y;
+
+      // Convertir movimiento del touch a velocidad de rotación
+      const sensitivity = 0.008; // Ligeramente mayor sensibilidad para touch
+      rotationVelocityRef.current = {
+        x: -deltaY * sensitivity,
+        y: deltaX * sensitivity,
+      };
+
+      previousMousePositionRef.current = {
+        x: touch.clientX,
+        y: touch.clientY,
+      };
+
+      // Prevenir scroll en móviles
+      event.preventDefault();
+    };
+
     const handleMouseUp = () => {
+      isDraggingRef.current = false;
+      previousMousePositionRef.current = null;
+    };
+
+    const handleTouchEnd = () => {
       isDraggingRef.current = false;
       previousMousePositionRef.current = null;
     };
@@ -341,11 +387,21 @@ export const TechCube: React.FC<TechCubeProps> = ({
       }
     };
 
-    // Añadir event listeners al canvas
+    // Añadir event listeners al canvas (mouse y touch)
     renderer.domElement.addEventListener("mousedown", handleMouseDown);
     renderer.domElement.addEventListener("mousemove", handleMouseMove);
     renderer.domElement.addEventListener("mouseup", handleMouseUp);
     renderer.domElement.addEventListener("mouseleave", handleMouseUp);
+
+    // Event listeners para dispositivos táctiles
+    renderer.domElement.addEventListener("touchstart", handleTouchStart, {
+      passive: false,
+    });
+    renderer.domElement.addEventListener("touchmove", handleTouchMove, {
+      passive: false,
+    });
+    renderer.domElement.addEventListener("touchend", handleTouchEnd);
+    renderer.domElement.addEventListener("touchcancel", handleTouchEnd);
 
     // Animación con velocidad reducida e interacción
     let frameId: number;
@@ -389,18 +445,21 @@ export const TechCube: React.FC<TechCubeProps> = ({
     };
     animate();
 
-    // Raycaster para detectar hover y clicks
+    // Raycaster para detectar hover y clicks (mouse y touch)
     const raycaster = new THREE.Raycaster();
     const mouse = new THREE.Vector2();
     let previousHoveredFace: number | null = null;
 
-    function onMouseMove(event: MouseEvent) {
+    function updateMousePosition(clientX: number, clientY: number) {
+      const rect = renderer.domElement.getBoundingClientRect();
+      mouse.x = ((clientX - rect.left) / rect.width) * 2 - 1;
+      mouse.y = -((clientY - rect.top) / rect.height) * 2 + 1;
+    }
+
+    function checkHover() {
       // No detectar hover si estamos arrastrando
       if (isDraggingRef.current) return;
 
-      const rect = renderer.domElement.getBoundingClientRect();
-      mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
-      mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
       raycaster.setFromCamera(mouse, camera);
       const intersects = raycaster.intersectObjects(cubes);
 
@@ -429,17 +488,44 @@ export const TechCube: React.FC<TechCubeProps> = ({
       }
     }
 
+    function onMouseMove(event: MouseEvent) {
+      updateMousePosition(event.clientX, event.clientY);
+      checkHover();
+    }
+
+    function onTouchMove(event: TouchEvent) {
+      if (event.touches.length === 1) {
+        const touch = event.touches[0];
+        updateMousePosition(touch.clientX, touch.clientY);
+        checkHover();
+      }
+    }
+
     renderer.domElement.addEventListener("mousemove", onMouseMove);
+
+    // Event listeners para hover táctil
+    renderer.domElement.addEventListener("touchmove", onTouchMove, {
+      passive: true,
+    });
 
     // Guardar referencia local para cleanup
     const mountNode = mountRef.current;
 
     return () => {
+      // Cleanup mouse events
       renderer.domElement.removeEventListener("mousemove", onMouseMove);
       renderer.domElement.removeEventListener("mousedown", handleMouseDown);
       renderer.domElement.removeEventListener("mousemove", handleMouseMove);
       renderer.domElement.removeEventListener("mouseup", handleMouseUp);
       renderer.domElement.removeEventListener("mouseleave", handleMouseUp);
+
+      // Cleanup touch events
+      renderer.domElement.removeEventListener("touchstart", handleTouchStart);
+      renderer.domElement.removeEventListener("touchmove", handleTouchMove);
+      renderer.domElement.removeEventListener("touchend", handleTouchEnd);
+      renderer.domElement.removeEventListener("touchcancel", handleTouchEnd);
+      renderer.domElement.removeEventListener("touchmove", onTouchMove);
+
       if (mountNode) mountNode.removeChild(renderer.domElement);
       cancelAnimationFrame(frameId);
       cubes.forEach((cube) => {
