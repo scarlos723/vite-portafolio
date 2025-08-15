@@ -455,7 +455,7 @@ export const TechCube: React.FC<TechCubeProps> = ({
 
   return (
     <div
-      className="size-[300px] lg:size-[600px] mt-10"
+      className="size-[300px] lg:size-[600px] mt-10 lg:mt-40"
       style={{ position: "relative" }}
     >
       <div ref={mountRef} className="grid place-content-center" />
