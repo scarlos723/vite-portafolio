@@ -1,0 +1,88 @@
+
+.light {
+    display: none;
+    div{
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        border-radius:50%;
+        opacity: 0.3;
+    }
+   div:nth-child(1){ 
+        background-color: #600bce;
+        left: -50%;
+        box-shadow: 1px 1px 30px 30px  #600bce;
+   }
+   div:nth-child(2){
+        right: -50%;
+        background-color: #3c87ea;
+        box-shadow: 1px 1px 30px 30px  #3c87ea;
+    }
+    @media screen and (min-width: 768px){
+        div{
+            width: 350px;
+            height: 300px;
+            border-radius:110px;
+        }
+        div:nth-child(1){
+            left: 0%;   
+        }
+        div:nth-child(2){
+            right: 0%;
+        }
+    }
+ 
+    @media screen and (min-width: 1024px){
+        div{
+            width: 410px;
+        }
+    }
+    
+    @media screen and (min-width: 1280px){
+    
+    }
+    
+    @media screen and (min-width: 1536px){
+    
+    }
+}
+
+.sphere{
+  position: absolute;
+  left: 50%;
+  width: 1200px;
+  height: 1200px;
+  border-radius: 50%;
+  mix-blend-mode: screen; 
+   background: radial-gradient( 
+    black 50%, 
+    #4922E5 60%,
+    #c956fb 66%, 
+    #ffffff 70%);
+  box-shadow: 
+    /* Sombras externas - luz rebotando hacia afuera */
+
+
+    /* Punto de luz más brillante - simula reflexión especular */
+    0px -30px 80px rgba(241, 202, 255, 0.488),  /* Luz principal arriba-izquierda */
+    
+    /* Sombras internas - profundidad y volumen */
+    inset -0px -0px 120px rgba(255, 255, 255, 0.626);      /* Sombra principal (abajo-derecha) */
+     /* Highlight sutil */
+
+}
+
+
+
+/* Estilos para pantallas menores de 768px */
+@media screen and (max-width: 767px) {
+  .sphere {
+      width: 700px;
+      height: 700px;
+      left: 50%;
+      box-shadow: 
+        0px -20px 60px rgba(241, 202, 255, 0.4),
+        inset -0px -0px 100px rgba(255, 255, 255, 0.5);
+    }
+}
+
