@@ -13,9 +13,13 @@ import {
   //SiLaravel,
   SiBootstrap,
   SiDjango,
+  SiElasticsearch,
+  SiGo,
   SiJavascript,
   SiNextdotjs,
+  SiOpensearch,
   SiPostgresql,
+  SiSpring,
   SiSqlite,
   SiTailwindcss,
   SiTerraform,
@@ -116,5 +120,21 @@ export const TECHNOLOGIES = [
   {
     icon: BiLogoTypescript,
     name: "TypeScript",
+  },
+  {
+    icon: SiOpensearch,
+    name: "Open Search",
+  },
+  {
+    icon: SiElasticsearch,
+    name: "Elastic Search",
+  },
+  {
+    icon: SiSpring,
+    name: "Spring Boot",
+  },
+  {
+    icon: SiGo,
+    name: "Go",
   },
 ];
