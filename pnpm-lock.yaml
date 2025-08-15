@@ -43,6 +43,9 @@ devDependencies:
   '@types/react-dom':
     specifier: ^19.1.7
     version: 19.1.7(@types/react@19.1.10)
+  '@types/react-helmet':
+    specifier: ^6.1.11
+    version: 6.1.11
   '@types/three':
     specifier: ^0.179.0
     version: 0.179.0
@@ -888,6 +891,12 @@ packages:
     resolution: {integrity: sha512-i5ZzwYpqjmrKenzkoLM2Ibzt6mAsM7pxB6BCIouEVVmgiqaMj1TjaK7hnA36hbW5aZv20kx7Lw6hWzPWg0Rurw==}
     peerDependencies:
       '@types/react': ^19.0.0
+    dependencies:
+      '@types/react': 19.1.10
+    dev: true
+
+  /@types/react-helmet@6.1.11:
+    resolution: {integrity: sha512-0QcdGLddTERotCXo3VFlUSWO3ztraw8nZ6e3zJSgG7apwV5xt+pJUS8ewPBqT4NYB1optGLprNQzFleIY84u/g==}
     dependencies:
       '@types/react': 19.1.10
     dev: true

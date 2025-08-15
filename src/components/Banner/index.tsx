@@ -1,27 +1,12 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import { GithubIcon, LinkedinIcon } from "../Icons";
-import StarsBg from "./stars";
+import StarsBg from "./Stars";
 import styles from "./styles.module.css";
+import { useParallax } from "./useParallax";
 export const Banner = () => {
-  const homeBannerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: homeBannerRef,
-    offset: ["start start", "end start"],
-  });
-  const textStyles = {
-    color: useTransform(scrollYProgress, [0, 0.1], ["#000000", "#ffffff"]),
-    opacity: useTransform(scrollYProgress, [0, 0.6, 1], [1, 1, 0]),
-    opacityIcon: useTransform(scrollYProgress, [0, 0.3, 0.7], [1, 0, 0]),
-    starColor: useTransform(
-      scrollYProgress,
-      [0, 0.2],
-      ["rgba(221, 208, 255, 0)", "#ffffff"]
-    ),
-  };
-  const backgroundStyles = {
-    color: useTransform(scrollYProgress, [0, 0.1], ["#e0e7ff", "#000000"]),
-  };
+  const { homeBannerRef, textStyles, backgroundStyles, sphereStyles } =
+    useParallax();
+
   return (
     <>
       <motion.div
@@ -64,14 +49,7 @@ export const Banner = () => {
       </section>
       {/* Sphere en contenedor con overflow controlado localmente */}
       <div className="absolute -z-1  top-0 w-full overflow-hidden h-[1500px] lg:h-[2200px] flex items-center">
-        <motion.div
-          style={{
-            y: useTransform(scrollYProgress, [0, 0.1], [0, -100]),
-            scale: useTransform(scrollYProgress, [0, 0.1], [1, 1.9]),
-            x: "-50%",
-          }}
-          className={styles.sphere}
-        />
+        <motion.div style={sphereStyles} className={styles.sphere} />
       </div>
     </>
   );
