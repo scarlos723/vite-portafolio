@@ -27,7 +27,7 @@ export const Banner = () => {
         >
           <div>
             <h1 className="font-extrabold mb-3 text-5xl">Carlos Sánchez</h1>
-            <p className="text-2xl">
+            <p className="text-2xl font-bold">
               Software Developer, DevOps & Cloud Infrastructure Engineer
             </p>
           </div>

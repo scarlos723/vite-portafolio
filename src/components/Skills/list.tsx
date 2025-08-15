@@ -1,3 +1,4 @@
+import { BiLogoTypescript } from "react-icons/bi";
 import { DiMaterializecss, DiReact } from "react-icons/di";
 import {
   // FaPhp,
@@ -20,7 +21,7 @@ import {
   SiTerraform,
   SiVite,
 } from "react-icons/si";
-import { TbBrandThreejs, TbBrandTypescript } from "react-icons/tb";
+import { TbBrandThreejs } from "react-icons/tb";
 
 export const TECHNOLOGIES = [
   {
@@ -113,7 +114,7 @@ export const TECHNOLOGIES = [
     name: "CI/CD With Docker, AWS and Github",
   },
   {
-    icon: TbBrandTypescript,
+    icon: BiLogoTypescript,
     name: "TypeScript",
   },
 ];
