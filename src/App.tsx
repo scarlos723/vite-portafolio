@@ -2,11 +2,13 @@ import { Banner } from "./components/Banner";
 import Education from "./components/Education";
 import { Experience } from "./components/Experience";
 import Projects from "./components/Projects";
+import Seo from "./components/Seo";
 import Skills from "./components/Skills";
 
 function App() {
   return (
     <main>
+      <Seo />
       {/* <Header /> */}
       <Banner />
       <Experience />
