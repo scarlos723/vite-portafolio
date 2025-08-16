@@ -34,9 +34,9 @@ export default function Skills() {
                   <strong className="text-purple-300 font-semibold">
                     infraestructura en la nube
                   </strong>{" "}
-                  y{" "}
+                  y desarrollo de{" "}
                   <strong className="text-purple-300 font-semibold">
-                    desarrollo web
+                    proyectos web
                   </strong>
                   .
                 </p>
