@@ -20,27 +20,45 @@ export default function Skills() {
           <section className="grid">
             <div className="group relative bg-gradient-to-br from-purple-900/70 to-gray-900/80 backdrop-blur-md rounded-3xl p-8 border border-gray-600/40 hover:border-purple-400/60 transition-all duration-500 hover:scale-[1.02] hover:shadow-xl hover:shadow-purple-500/20 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
-              <div className="relative z-10 grid gap-6 rounded-lg my-auto">
+              <div className="relative text-pretty z-10 grid gap-6 rounded-lg my-auto">
                 <p className="text-2xl leading-relaxed text-gray-200 group-hover:text-gray-100 transition-colors duration-300">
                   Soy{" "}
-                  <span className="text-white font-semibold">
-                    ingeniero en Electrónica y Telecomunicaciones
+                  <span className="font-bold text-purple-300 ">
+                    Ingeniero en Electrónica y Telecomunicaciones
                   </span>{" "}
-                  especializado en <strong>DevOps</strong> y en liderar{" "}
-                  <strong>proyectos web</strong>.
+                  especializado en{" "}
+                  <strong className="text-purple-300  font-semibold">
+                    DevOps
+                  </strong>
+                  , aprovisionamiento de{" "}
+                  <strong className="text-purple-300 font-semibold">
+                    infraestructura en la nube
+                  </strong>{" "}
+                  y{" "}
+                  <strong className="text-purple-300 font-semibold">
+                    desarrollo web
+                  </strong>
+                  .
                 </p>
 
                 <p className="text-lg leading-relaxed text-gray-300 group-hover:text-gray-100 transition-colors duration-300">
-                  Me apasiona <strong>aprender constantemente</strong> y asumir
-                  nuevos retos tecnológicos. Siempre estoy al día con
-                  herramientas modernas para crear y desplegar aplicaciones web
-                  rápidas, seguras y escalables.
+                  Me apasiona el{" "}
+                  <strong className="text-purple-300  font-semibold">
+                    aprendizaje continuo
+                  </strong>{" "}
+                  y enfrentar nuevos desafíos tecnológicos. Mantengo un enfoque
+                  actualizado en herramientas modernas para crear y desplegar
+                  aplicaciones web{" "}
+                  <em className="text-emerald-300 font-medium">
+                    rápidas, seguras y escalables
+                  </em>
+                  .
                 </p>
 
                 <div className="pt-4 border-t border-gray-600/30">
-                  <p className="text-lg leading-relaxed text-gray-300 group-hover:text-gray-100 transition-colors duration-300">
-                    En este portafolio encontrarás mis habilidades, las
-                    tecnologías que domino y los proyectos que reflejan mi
+                  <p className="text-lg leading-relaxed text-gray-400 group-hover:text-gray-100 transition-colors duration-300">
+                    En este portafolio encontrarás mis habilidades técnicas ,
+                    las tecnologías que domino y los proyectos que definen mi
                     experiencia profesional.
                   </p>
                 </div>
@@ -49,25 +67,6 @@ export default function Skills() {
           </section>
           <section className={`${styles.halo} grid w-full place-items-center`}>
             <TechCube technologies={TECHNOLOGIES} />
-            {/* <div className="relative">
-              <div className={styles["halo"]}>
-                {TECHNOLOGIES.map((tech, index) => (
-                  <article
-                    key={`${tech.name}-${index}`}
-                    className={styles["tech-item"]}
-                  >
-                    <div className="relative z-10 size-9">{tech.icon}</div>
-                    <div
-                      className={`${styles["tech-name"]} border border-gray-600/50 group-hover/tech:border-purple-400/50 transition-all duration-300`}
-                    >
-                      <p className="text-white font-bold text-sm whitespace-nowrap">
-                        {tech.name}
-                      </p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div> */}
           </section>
         </div>
       </section>
