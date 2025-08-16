@@ -22,27 +22,26 @@ export default function Skills() {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
               <div className="relative z-10 grid gap-6 rounded-lg my-auto">
                 <p className="text-2xl leading-relaxed text-gray-200 group-hover:text-gray-100 transition-colors duration-300">
+                  Soy{" "}
                   <span className="text-white font-semibold">
-                    Ingeniero en Electrónica y Telecomunicaciones
+                    ingeniero en Electrónica y Telecomunicaciones
                   </span>{" "}
-                  con experiencia especializada en <strong>DevOps</strong> y
-                  liderazgo de proyectos <strong>Frontend</strong>.
+                  especializado en <strong>DevOps</strong> y en liderar{" "}
+                  <strong>proyectos web</strong>.
                 </p>
 
                 <p className="text-lg leading-relaxed text-gray-300 group-hover:text-gray-100 transition-colors duration-300">
-                  Me apasiona el <strong>aprendizaje constante</strong> y
-                  enfrentar nuevos desafíos tecnológicos. Mantengo un enfoque
-                  actualizado en herramientas modernas para el desarrollo y
-                  despliegue de aplicaciones web escalables.
+                  Me apasiona <strong>aprender constantemente</strong> y asumir
+                  nuevos retos tecnológicos. Siempre estoy al día con
+                  herramientas modernas para crear y desplegar aplicaciones web
+                  rápidas, seguras y escalables.
                 </p>
 
                 <div className="pt-4 border-t border-gray-600/30">
                   <p className="text-lg leading-relaxed text-gray-300 group-hover:text-gray-100 transition-colors duration-300">
-                    En este portafolio encontrarás mis{" "}
-                    <strong>habilidades técnicas</strong>, las{" "}
-                    <strong>tecnologías</strong> que domino y los{" "}
-                    <strong>proyectos</strong> que definen mi experiencia
-                    profesional.
+                    En este portafolio encontrarás mis habilidades, las
+                    tecnologías que domino y los proyectos que reflejan mi
+                    experiencia profesional.
                   </p>
                 </div>
               </div>
