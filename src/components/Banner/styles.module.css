@@ -3,7 +3,7 @@
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
   100% {
     opacity: 1;
@@ -16,7 +16,12 @@
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
-
+/* Transición para ocultar contenido estático */
+.hideStaticContent {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: opacity 0.3s ease-out;
+}
 
 .light {
     display: none;
@@ -56,14 +61,6 @@
             width: 410px;
         }
     }
-    
-    @media screen and (min-width: 1280px){
-    
-    }
-    
-    @media screen and (min-width: 1536px){
-    
-    }
 }
 
 .sphere{
@@ -79,19 +76,9 @@
     #c956fb 66%, 
     #ffffff 70%);
   box-shadow: 
-    /* Sombras externas - luz rebotando hacia afuera */
-
-
-    /* Punto de luz más brillante - simula reflexión especular */
-    0px -30px 80px rgba(241, 202, 255, 0.488),  /* Luz principal arriba-izquierda */
-    
-    /* Sombras internas - profundidad y volumen */
-    inset -0px -0px 120px rgba(255, 255, 255, 0.626);      /* Sombra principal (abajo-derecha) */
-     /* Highlight sutil */
-
+    0px -30px 80px rgba(241, 202, 255, 0.488),
+    inset -0px -0px 120px rgba(255, 255, 255, 0.626);
 }
-
-
 
 /* Estilos para pantallas menores de 768px */
 @media screen and (max-width: 767px) {
@@ -104,5 +91,3 @@
         inset -0px -0px 100px rgba(255, 255, 255, 0.5);
     }
 }
-
-

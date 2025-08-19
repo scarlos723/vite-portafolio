@@ -9,6 +9,24 @@ body{
   background-color: black;
   color:white; 
 }
+
+/* Asegurar que el contenido principal sea visible para LCP */
+.lcp-content {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 100 !important;
+}
+
+.lcp-title {
+  font-size: 3rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  margin: 1rem 0 !important;
+  line-height: 1.1 !important;
+}
+
 @layer base {
   .container {
     @apply px-5 md:px-10 2xl:px-20 w-full mx-auto lg:max-w-[1280px] xl:max-w-[1536px];
