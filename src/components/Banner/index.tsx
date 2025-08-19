@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { OneTime } from "../Animations/OneTime";
 import { GithubIcon, LinkedinIcon } from "../Icons";
 import StarsBg from "./Stars";
 import styles from "./styles.module.css";
@@ -19,15 +18,7 @@ export const Banner = () => {
       <StarsBg
         color={textStyles.starColor} // Pass the star color from useParallax
       />
-      <OneTime
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{
-          type: "spring",
-          stiffness: 100,
-          damping: 20,
-        }}
-      >
+      <div className={styles.fadeInUp}>
         <section ref={homeBannerRef} className="container h-[900px] relative">
           <motion.div
             className="sticky top-20 max-w-[380px] text-center  mx-auto grid gap-18"
@@ -59,7 +50,7 @@ export const Banner = () => {
             </div>
           </motion.div>
         </section>
-      </OneTime>
+      </div>
       {/* Sphere en contenedor con overflow controlado localmente */}
       <div className="absolute -z-1  top-0 w-full overflow-hidden h-[1500px] lg:h-[2200px] flex items-center">
         <motion.div style={sphereStyles} className={styles.sphere} />
