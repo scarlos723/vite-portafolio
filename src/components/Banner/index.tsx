@@ -45,12 +45,14 @@ export const Banner = () => {
               <a
                 href="https://github.com/scarlos723"
                 className="size-20 p-1 rounded-full hover:scale-110 transition-transform hover:shadow-md hover:shadow-gray-300"
+                aria-label="Github"
               >
                 <GithubIcon className="size-full" />
               </a>
               <a
                 href="https://www.linkedin.com/in/carlos-sanchez-69b277196/"
                 className="size-20 p-1 rounded-sm hover:scale-110 transition-transform hover:shadow-md hover:shadow-gray-300"
+                aria-label="LinkedIn"
               >
                 <LinkedinIcon className="size-full" />
               </a>

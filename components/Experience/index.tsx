@@ -23,9 +23,9 @@ export const Experience = () => {
 
                     <div className="relative z-10 grid lg:flex items-start lg:items-center gap-4 mb-6">
                       <div className="flex-shrink-0">
-                        <h4 className="text-left uppercase text-2xl lg:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent group-hover:from-blue-300 group-hover:to-purple-400 transition-all duration-300">
+                        <h3 className="text-left uppercase text-2xl lg:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent group-hover:from-blue-300 group-hover:to-purple-400 transition-all duration-300">
                           {item.company}
-                        </h4>
+                        </h3>
                       </div>
                       <div className="text-left leading-tight flex-grow">
                         <h5 className="text-lg font-semibold text-gray-200 group-hover:text-white transition-colors duration-300">

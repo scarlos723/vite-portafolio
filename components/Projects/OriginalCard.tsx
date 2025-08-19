@@ -92,9 +92,9 @@ export const OriginalCard = (props: {
             {/* Info section */}
             <section className="relative bg-gradient-to-r from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 group-hover:border-purple-400/30 transition-all duration-300">
               {/* Título de tecnologías */}
-              <h4 className="text-sm font-semibold text-gray-400 text-center mb-4">
+              <h3 className="text-sm font-semibold text-gray-400 text-center mb-4">
                 Tecnologías Usadas
-              </h4>
+              </h3>
 
               {/* Tech icons */}
               <div className="flex items-center justify-center gap-3 flex-wrap">

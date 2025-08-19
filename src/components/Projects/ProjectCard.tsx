@@ -85,9 +85,9 @@ const ProjectCard = (props: ProjectCardProps) => {
           {/* Info section más compacta */}
           <section className="relative bg-gradient-to-r from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-lg p-3 border border-gray-700/50 group-hover:border-purple-400/30 transition-all duration-300">
             {/* Título de tecnologías */}
-            <h4 className="text-xs font-semibold text-gray-400 text-center mb-2">
+            <h3 className="text-xs font-semibold text-gray-400 text-center mb-2">
               Tecnologías Usadas
-            </h4>
+            </h3>
 
             {/* Tech icons más pequeños */}
             <div className="flex items-center justify-center gap-2 flex-wrap">
