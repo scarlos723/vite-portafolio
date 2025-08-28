@@ -23,7 +23,7 @@ const StarsBg = (color: MotionStyle) => {
     setList(auxlist);
   }, [color]);
   return (
-    <div className="absolute top-0 z-1 w-[100dvw] h-[100vh]">
+    <div className="absolute top-0 z-1 w-full h-[100vh]">
       {list.map((star) => star)}
     </div>
   );

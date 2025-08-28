@@ -100,7 +100,7 @@ export const Banner = () => {
 
       {/* Elementos de fondo y efectos visuales */}
       <motion.div
-        className="w-screen h-full absolute top-0 left-0 z-[-2]"
+        className="w-full h-full absolute top-0 left-0 z-[-2]"
         style={{
           backgroundColor: backgroundStyles.color,
         }}
