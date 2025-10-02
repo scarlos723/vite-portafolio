@@ -2,7 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import type { IconType } from "react-icons";
 import * as THREE from "three";
+
 import { OneTime } from "../Animations/OneTime";
+import TechGridFallback from "./TechGridFallback";
 
 // Props: array de objetos { icon: string (url), name: string }
 interface TechCubeProps {
@@ -22,6 +24,7 @@ export const TechCube: React.FC<TechCubeProps> = ({
   const mountRef = useRef<HTMLDivElement>(null);
   const [hoveredFace, setHoveredFace] = useState<number | null>(null);
   const [faceNames, setFaceNames] = useState<string[]>([]);
+  const [webglError, setWebglError] = useState<string | null>(null);
 
   // Usar useRef para valores que cambian frecuentemente en animación
   const rotationVelocityRef = useRef({ x: 0, y: 0 });
@@ -41,6 +44,8 @@ export const TechCube: React.FC<TechCubeProps> = ({
   useEffect(() => {
     if (!mountRef.current) return;
 
+    console.log("TechCube useEffect started");
+
     // Escena
     const scene = new THREE.Scene();
     // Sin fondo para que use el fondo transparente del CSS
@@ -48,26 +53,42 @@ export const TechCube: React.FC<TechCubeProps> = ({
     camera.position.set(5, 5, 5); // Acercado de (6,6,6) a (5,5,5)
     camera.lookAt(0, 0, 0);
 
-    const renderer = new THREE.WebGLRenderer({
-      alpha: true,
-      antialias: true,
-      powerPreference: "high-performance",
-      failIfMajorPerformanceCaveat: false,
-      preserveDrawingBuffer: false,
-      premultipliedAlpha: false,
-    });
-    renderer.setClearColor(0x000000, 0); // Fondo transparente
-    renderer.setSize(400, 400);
-    renderer.shadowMap.enabled = true; // Habilitar sombras
-    renderer.shadowMap.type = THREE.PCFSoftShadowMap; // Sombras suaves
-    renderer.toneMapping = THREE.ACESFilmicToneMapping; // Mejor renderizado
-    renderer.toneMappingExposure = 1.5; // Más exposición para resaltar los materiales
+    let renderer: THREE.WebGLRenderer;
 
-    // Configuración de pixel ratio para Safari en dispositivos Retina
-    const pixelRatio = Math.min(window.devicePixelRatio, 2);
-    renderer.setPixelRatio(pixelRatio);
+    try {
+      console.log("Creating THREE.WebGLRenderer...");
+      renderer = new THREE.WebGLRenderer({
+        alpha: true,
+        antialias: true,
+        powerPreference: "default",
+        failIfMajorPerformanceCaveat: false,
+        preserveDrawingBuffer: false,
+        premultipliedAlpha: false,
+      });
+      console.log("THREE.WebGLRenderer created successfully");
+    } catch (error) {
+      console.error("Failed to create THREE.WebGLRenderer:", error);
+      setWebglError(`Error al crear el renderizador WebGL: ${error}`);
+      return;
+    }
+    try {
+      renderer.setClearColor(0x000000, 0); // Fondo transparente
+      renderer.setSize(400, 400);
+      renderer.shadowMap.enabled = true; // Habilitar sombras
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap; // Sombras suaves
+      renderer.toneMapping = THREE.ACESFilmicToneMapping; // Mejor renderizado
+      renderer.toneMappingExposure = 1.5; // Más exposición para resaltar los materiales
 
-    mountRef.current.appendChild(renderer.domElement);
+      // Configuración de pixel ratio para Safari en dispositivos Retina
+      const pixelRatio = Math.min(window.devicePixelRatio, 2);
+      renderer.setPixelRatio(pixelRatio);
+
+      mountRef.current.appendChild(renderer.domElement);
+    } catch (error) {
+      console.error("Failed to configure WebGL renderer:", error);
+      setWebglError("Error al configurar el renderizador WebGL");
+      return;
+    }
 
     // Utilidad para renderizar un ReactElement (SVG) a un canvas y obtener una textura
     function renderIconToTexture(icon: React.ReactElement): THREE.Texture {
@@ -406,44 +427,58 @@ export const TechCube: React.FC<TechCubeProps> = ({
     // Animación con velocidad reducida e interacción
     let frameId: number;
     const animate = () => {
-      // Rotación automática más lenta cuando no se está arrastrando
-      if (!isDraggingRef.current) {
-        cubeGroup.rotation.x += rotationVelocityRef.current.x + 0.003; // Reducido de 0.008
-        cubeGroup.rotation.y += rotationVelocityRef.current.y + 0.005; // Reducido de 0.012
+      try {
+        // Rotación automática más lenta cuando no se está arrastrando
+        if (!isDraggingRef.current) {
+          cubeGroup.rotation.x += rotationVelocityRef.current.x + 0.003; // Reducido de 0.008
+          cubeGroup.rotation.y += rotationVelocityRef.current.y + 0.005; // Reducido de 0.012
 
-        // Aplicar fricción para desacelerar gradualmente
-        rotationVelocityRef.current = {
-          x: rotationVelocityRef.current.x * 0.95,
-          y: rotationVelocityRef.current.y * 0.95,
-        };
-      }
-
-      // Animar cubos individuales (hover effects)
-      cubes.forEach((cube, index) => {
-        const target = animationTargetsRef.current.get(index);
-        if (target) {
-          const originalPos = cube.userData.originalPosition;
-
-          // Suavizar la transición hacia el target (más lento en móvil para mejor rendimiento)
-          const isMobile = window.innerWidth < 768;
-          const lerpSpeed = isMobile ? 0.08 : 0.1; // Más suave en móvil
-
-          // Animar escala
-          cube.scale.lerp(
-            new THREE.Vector3(target.scale, target.scale, target.scale),
-            lerpSpeed
-          );
-
-          // Animar posición (offset desde posición original)
-          const targetPosition = originalPos.clone().add(target.offset);
-          cube.position.lerp(targetPosition, lerpSpeed);
+          // Aplicar fricción para desacelerar gradualmente
+          rotationVelocityRef.current = {
+            x: rotationVelocityRef.current.x * 0.95,
+            y: rotationVelocityRef.current.y * 0.95,
+          };
         }
-      });
 
-      renderer.render(scene, camera);
-      frameId = requestAnimationFrame(animate);
+        // Animar cubos individuales (hover effects)
+        cubes.forEach((cube, index) => {
+          const target = animationTargetsRef.current.get(index);
+          if (target) {
+            const originalPos = cube.userData.originalPosition;
+
+            // Suavizar la transición hacia el target (más lento en móvil para mejor rendimiento)
+            const isMobile = window.innerWidth < 768;
+            const lerpSpeed = isMobile ? 0.08 : 0.1; // Más suave en móvil
+
+            // Animar escala
+            cube.scale.lerp(
+              new THREE.Vector3(target.scale, target.scale, target.scale),
+              lerpSpeed
+            );
+
+            // Animar posición (offset desde posición original)
+            const targetPosition = originalPos.clone().add(target.offset);
+            cube.position.lerp(targetPosition, lerpSpeed);
+          }
+        });
+
+        renderer.render(scene, camera);
+        frameId = requestAnimationFrame(animate);
+      } catch (error) {
+        console.error("Animation error:", error);
+        setWebglError("Error durante la animación WebGL");
+        cancelAnimationFrame(frameId);
+      }
     };
-    animate();
+
+    try {
+      console.log("Starting animation...");
+      animate();
+      console.log("Animation started successfully");
+    } catch (error) {
+      console.error("Failed to start animation:", error);
+      setWebglError("Error al iniciar la animación WebGL");
+    }
 
     // Raycaster para detectar hover y clicks (mouse y touch)
     const raycaster = new THREE.Raycaster();
@@ -512,6 +547,7 @@ export const TechCube: React.FC<TechCubeProps> = ({
     const mountNode = mountRef.current;
 
     return () => {
+      console.log("Cleaning up TechCube...");
       // Cleanup mouse events
       renderer.domElement.removeEventListener("mousemove", onMouseMove);
       renderer.domElement.removeEventListener("mousedown", handleMouseDown);
@@ -537,7 +573,15 @@ export const TechCube: React.FC<TechCubeProps> = ({
         }
       });
     };
+
+    console.log("TechCube useEffect completed successfully");
   }, [technologies, size]);
+
+  // Solo mostrar fallback si hay un error específico
+  if (webglError) {
+    console.log("Showing fallback due to error:", webglError);
+    return <TechGridFallback technologies={technologies} size={size} />;
+  }
 
   return (
     <div
