@@ -1,0 +1,147 @@
+/* Timeline Styles */
+.timeline {
+  position: relative;
+}
+
+.timelineItem {
+  position: relative;
+  padding-left: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.timelineItem:last-child {
+  padding-bottom: 0;
+}
+
+.timelineItem::before {
+  content: '';
+  position: absolute;
+  left: 0.625rem;
+  top: 2rem;
+  bottom: -0.5rem;
+  width: 2px;
+  background: linear-gradient(180deg, #60A5FA 0%, #3B82F6 50%, rgba(59, 130, 246, 0.1) 100%);
+}
+
+.timelineItem:last-child::before {
+  background: linear-gradient(180deg, #60A5FA 0%, rgba(59, 130, 246, 0.1) 100%);
+}
+
+.timelineDot {
+  position: absolute;
+  left: 0;
+  top: 1.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3B82F6, #60A5FA);
+  border: 3px solid #1E293B;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.timelineItem:hover .timelineDot {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.3), 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+.dotCompleted {
+  background: linear-gradient(135deg, #10B981, #34D399);
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+}
+
+.timelineItem:hover .dotCompleted {
+  box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.3), 0 0 20px rgba(16, 185, 129, 0.4);
+}
+
+.dotInProgress {
+  background: linear-gradient(135deg, #F59E0B, #FBBF24);
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(245, 158, 11, 0.1);
+  }
+}
+
+/* Card Animations */
+.academyCard {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.academyCard:hover {
+  transform: translateY(-4px);
+}
+
+/* Course Card */
+.courseCard {
+  position: relative;
+  overflow: hidden;
+}
+
+.courseCard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.courseCard:hover::after {
+  left: 100%;
+}
+
+.categoryBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.categoryAI {
+  background: rgba(139, 92, 246, 0.2);
+  color: #C4B5FD;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.categoryWeb {
+  background: rgba(59, 130, 246, 0.2);
+  color: #93C5FD;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.categoryBlockchain {
+  background: rgba(16, 185, 129, 0.2);
+  color: #6EE7B7;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.courseCard:hover .shimmer {
+  transform: translateX(100%);
+}
