@@ -38,7 +38,12 @@ export const Experience = () => {
                     </div>
 
                     <div className="relative z-10">
-                      <ul className="space-y-3">
+                      <ul
+                        className={`space-y-3 ${
+                          item.responsabilities.length > 6 &&
+                          "lg:grid lg:grid-cols-2 lg:gap-x-6"
+                        }`}
+                      >
                         {item.responsabilities.map((responsability, index) => (
                           <li
                             className="flex items-start gap-3 text-left group/item"

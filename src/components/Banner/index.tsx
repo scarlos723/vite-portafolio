@@ -34,7 +34,8 @@ export const Banner = () => {
               Carlos Sánchez
             </h1>
             <p className="text-2xl font-bold text-white">
-              Software Developer, DevOps & Cloud Infrastructure
+              Software Developer, Cloud Infrastructure Architect & DevOps
+              Engineer
             </p>
           </div>
           <div className="flex items-center justify-center gap-8">
@@ -70,7 +71,8 @@ export const Banner = () => {
             >
               <h1 className="font-extrabold mb-3 text-5xl">Carlos Sánchez</h1>
               <p className="text-2xl font-bold">
-                Software Developer, DevOps & Cloud Infrastructure
+                Software Developer, Cloud Infrastructure Architect & DevOps
+                Engineer
               </p>
             </motion.div>
             <motion.div

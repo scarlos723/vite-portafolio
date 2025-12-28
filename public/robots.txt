@@ -1,0 +1,18 @@
+# robots.txt para portafolio de Carlos Sánchez
+# https://vite-portafolio-ten.vercel.app
+
+User-agent: *
+Allow: /
+
+# Bloquear assets pesados innecesarios para crawlers
+Disallow: /assets/images/
+Disallow: /*.png$
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.gif$
+
+# Sitemap
+Sitemap: https://vite-portafolio-ten.vercel.app/sitemap.xml
+
+# Crawl-delay para ser respetuoso con los recursos
+Crawl-delay: 1

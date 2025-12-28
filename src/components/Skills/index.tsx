@@ -23,43 +23,53 @@ export default function Skills() {
               <div className="relative text-pretty z-10 grid gap-6 rounded-lg my-auto">
                 <p className="text-2xl leading-relaxed text-gray-200 group-hover:text-gray-100 transition-colors duration-300">
                   Soy{" "}
-                  <span className="font-bold text-purple-300 ">
+                  <span className="font-bold text-purple-300">
                     Ingeniero en Electrónica y Telecomunicaciones
                   </span>{" "}
-                  especializado en{" "}
-                  <strong className="text-purple-300  font-semibold">
-                    DevOps
+                  con especialización en{" "}
+                  <strong className="text-purple-300 font-semibold">
+                    DevOps/SRE
                   </strong>
-                  , aprovisionamiento de{" "}
+                  , diseño de{" "}
                   <strong className="text-purple-300 font-semibold">
-                    infraestructura en la nube
+                    infraestructura cloud con AWS
                   </strong>{" "}
-                  y desarrollo de{" "}
+                  y desarrollo{" "}
                   <strong className="text-purple-300 font-semibold">
-                    proyectos web
+                    full-stack
+                  </strong>
+                  . Actualmente cursando un{" "}
+                  <strong className="text-blue-300 font-semibold">
+                    Máster en Ingeniería de Software
                   </strong>
                   .
                 </p>
 
                 <p className="text-lg leading-relaxed text-gray-300 group-hover:text-gray-100 transition-colors duration-300">
-                  Me apasiona el{" "}
-                  <strong className="text-purple-300  font-semibold">
-                    aprendizaje continuo
-                  </strong>{" "}
-                  y enfrentar nuevos desafíos tecnológicos. Mantengo un enfoque
-                  actualizado en herramientas modernas para crear y desplegar
-                  aplicaciones web{" "}
+                  Experto en{" "}
+                  <strong className="text-purple-300 font-semibold">
+                    Terraform, Docker y CI/CD
+                  </strong>
+                  , con amplia experiencia implementando arquitecturas de{" "}
                   <em className="text-emerald-300 font-medium">
-                    rápidas, seguras y escalables
-                  </em>
-                  .
+                    microservicios escalables y pipelines automatizados
+                  </em>{" "}
+                  que reducen tiempos de despliegue y mejoran la confiabilidad
+                  de los sistemas.
                 </p>
 
                 <div className="pt-4 border-t border-gray-600/30">
                   <p className="text-lg leading-relaxed text-gray-400 group-hover:text-gray-100 transition-colors duration-300">
-                    En este portafolio encontrarás mis habilidades técnicas ,
-                    las tecnologías que domino y los proyectos que definen mi
-                    experiencia profesional.
+                    Mi stack tecnológico ha evolucionado, desde{" "}
+                    <strong className="text-purple-300 font-medium">
+                      frontend moderno
+                    </strong>{" "}
+                    hasta{" "}
+                    <strong className="text-purple-300 font-medium">
+                      infraestructura cloud-native
+                    </strong>
+                    , explora los proyectos que demuestran mi capacidad para
+                    transformar ideas en soluciones reales.
                   </p>
                 </div>
               </div>

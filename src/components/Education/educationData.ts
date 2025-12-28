@@ -23,7 +23,7 @@ export const academicFormations: AcademicFormation[] = [
     period: "2016 - 2022",
     status: "completed",
     description:
-      "Formación en sistemas de telecomunicaciones, procesamiento de señales y desarrollo de hardware/software.",
+      "Formación en sistemas de telecomunicaciones, procesamiento de señales y enfasis en telemática y desarrollo de proyectos.",
   },
   {
     institution: "Universidad Internacional de la Rioja",

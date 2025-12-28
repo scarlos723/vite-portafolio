@@ -8,7 +8,10 @@ import Skills from "./components/Skills";
 function App() {
   return (
     <main>
-      <Seo title="Mi Portafolio - Desarrollador de software con más de 4 años de experiencia" />
+      <Seo
+        title="Carlos Sánchez - DevOps Engineer | Full Stack Developer | AWS Cloud Architect"
+        description="Portafolio de Carlos Sánchez: Ingeniero DevOps/SRE con +4 años de experiencia diseñando arquitecturas cloud-native en AWS con Terraform, implementando CI/CD con Docker y GitHub Actions, y desarrollando aplicaciones full-stack con React y TypeScript."
+      />
       {/* <Header /> */}
       <Banner />
       <Experience />
