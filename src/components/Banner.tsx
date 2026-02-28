@@ -1,6 +1,8 @@
 import { motion, useMotionValue, useTransform } from "motion/react";
 import { useEffect } from "react";
+
 import { AiOutlineLinkedin } from "react-icons/ai";
+
 export const Banner = () => {
   const scrollY = useMotionValue(0);
   const color = useTransform(
