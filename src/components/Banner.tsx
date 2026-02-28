@@ -12,7 +12,7 @@ export const Banner = () => {
   const bgColor = useTransform(
     scrollY,
     [0, 240],
-    ["#cbffe9", "#0a1118"], // de claro a oscuro
+    ["#dcfeef", "#0a1118"], // de claro a oscuro
   );
   function setSarstPoint() {
     const container = document.getElementById("stars-container");
