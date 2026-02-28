@@ -73,13 +73,13 @@ export const Skills = () => {
           {LIST_TECHNOLOGIES.map((tech) => (
             <div
               key={tech.name}
-              className="bg-gray-800 p-4 w-40 rounded-lg flex flex-col items-center justify-center"
+              className="bg-gray-800 p-4 w-24 lg:w-40 rounded-lg flex flex-col items-center justify-center"
             >
               <tech.icon
-                className="text-4xl mb-2"
+                className="text-lg lg:text-4xl mb-2"
                 style={{ color: tech.color }}
               />
-              <span className="text-white">{tech.name}</span>
+              <span className="text-xs lg:text-sm text-white">{tech.name}</span>
             </div>
           ))}
         </div>
