@@ -69,7 +69,7 @@ export const Skills = () => {
             proactividad técnica y el crecimiento mutuo.
           </p>
         </div>
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-2 lg:gap-6">
           {LIST_TECHNOLOGIES.map((tech) => (
             <div
               key={tech.name}
