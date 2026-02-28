@@ -12,13 +12,13 @@ export const Experience = () => {
             </h3>
             <p className="text-sm text-slate-400">{exp.dates}</p>
             <p className="mt-2">{exp.description}</p>
-            <ul>
+            {/* <ul>
               {exp.jobs.map((job, index) => (
                 <li key={index} className="mt-1 text-sm">
                   {job}
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </article>
         ))}
       </div>
