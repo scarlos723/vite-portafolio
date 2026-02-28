@@ -8,7 +8,7 @@ export const Banner = () => {
     [0, 240],
     ["#0a0e12", "#ffffff"], // de oscuro a claro
   );
-  const scaleSphere = useTransform(scrollY, [0, 240], [3, 100]);
+  const scaleSphere = useTransform(scrollY, [0, 5000], [3, 100]);
   const bgColor = useTransform(
     scrollY,
     [0, 240],
