@@ -20,7 +20,7 @@ export const Banner = () => {
     for (let i = 0; i < numberOfStars; i++) {
       const star = document.createElement("div");
       star.className = "star";
-      star.style.color = "#cbffe9";
+      star.style.color = "#dcfeef";
       star.style.position = "absolute";
       star.style.width = "1px";
       star.style.height = "1px";
@@ -47,7 +47,7 @@ export const Banner = () => {
       <MidSphereRadialGradient scaleSphere={scaleSphere} />
       <div
         id="stars-container"
-        className="absolute z-2 overflow-hidden grid h-dvh w-full"
+        className="absolute z-1 overflow-hidden grid h-dvh w-full"
       />
       <section className="h-dvh">
         <motion.div
@@ -55,14 +55,17 @@ export const Banner = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-center mt-40 lg:mt-0 xl:mt-50 sticky top-20 lg:w-125 mx-auto px-4"
+          className="text-center z-2 mt-24 lg:mt-0 xl:mt-50 sticky top-20 mx-auto px-4"
         >
-          <h1 className="text-5xl  xl:text-6xl  font-bold"> Carlos Sanchez</h1>
-          <p className="mt-1 text-xl xl:text-2xl ">
-            Ingeniero en Electrónica y Telecomunicaciones <br /> Full Stack
-            Developer | DevOps | AWS Cloud Architect
+          <h1 className="text-4xl  xl:text-6xl  font-bold"> Carlos Sanchez</h1>
+          <p className="transition mt-1 text-xl xl:text-2xl ">
+            Ingeniero en Electrónica y Telecomunicaciones <br /> DevOps | AWS
+            Cloud Architect | Full Stack Developer
           </p>
-          <a className="flex items-center justify-center mt-4 xl:mt-10">
+          <a
+            className="flex items-center transition justify-center mt-4 xl:mt-10 cursor-pointer hover:scale-125"
+            href="#"
+          >
             <AiOutlineLinkedin size={40} />
           </a>
         </motion.div>
