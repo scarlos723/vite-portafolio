@@ -1,24 +1,21 @@
 export const experienceData = [
   {
-    title: "Practicante de Desarrollo Web",
+    title: "Cloud & DevOps Engineer",
     company: "BPO2B",
-    description: `Brindé soporte a un sitio web desarrollado con Odoo, una plataforma de comercio electrónico que requería funcionalidades avanzadas. Esta experiencia me permitió familiarizarme con dicha tecnología. Además, aprendí React.js creando páginas para distintos clientes.`,
-    dates: "2021 - 2022",
+    description: `Actualmente diseño y gestión de infraestructura cloud en AWS utilizando Terraform (IaC). 
+    Administración de servicios como VPC, EC2 y ECS (Fargate/EC2), implementación de pipelines CI/CD y 
+    gestión de seguridad con IAM, Security Hub y Parameter Store. Experiencia en migraciones tecnológicas, 
+    arquitecturas de microservicios, optimización de costos y soporte a equipos de desarrollo en entornos productivos.`,
+
+    dates: "2022 - presente",
     jobs: [
-      `Desarrollo y mantenimiento de un sitio web en Odoo, implementando funcionalidades personalizadas para mejorar la experiencia del usuario.`,
-      `Modificación de frontend mediante CSS y JavaScript para adaptar el sitio a las necesidades del cliente.`,
+      `Diseño y administración de infraestructuras en AWS: VPC, subredes, IAM, gestión de secretos y controles de seguridad.`,
+      `Aprovisionamiento con Terraform; despliegue y operación de contenedores mediante Docker.`,
+      `Implementación y mantenimiento de pipelines CI/CD con GitHub Actions; gestión de secretos y repositorios.`,
+      `Monitoreo, respuesta a incidentes y automatización de remediaciones (Security Hub, alertas, runbooks).`,
     ],
   },
-  {
-    title: "Desarrollador Frontend",
-    company: "BPO2B",
-    description: `Participé en proyectos que involucraban tecnologías como React, Next.js, Node.js, Webpack, Solidity y Vite.js. El proyecto más destacado fue Filmcoin, donde mi equipo y yo implementamos pasarelas de pago, incluyendo transacciones con criptomonedas. También desarrollé animaciones utilizando Three.js. Mis responsabilidades incluían investigación, lectura de documentación e implementación de conocimientos en los proyectos. El reto más significativo fue comprender la tecnología Blockchain y el funcionamiento de los contratos inteligentes, lo cual me llevó a aprender Solidity y a entender el ecosistema de Ethereum.`,
-    dates: "2021 - 2022",
-    jobs: [
-      `Desarrollo y mantenimiento de aplicaciones web.`,
-      `Administración de proyectos utilizando GitHub, incluyendo la gestión de ramas, pull requests y resolución de conflictos.`,
-    ],
-  },
+
   {
     title: "Ingeniero Frontend",
     company: "RETRI SAS",
@@ -30,15 +27,23 @@ export const experienceData = [
     ],
   },
   {
-    title: "DevOps Engineer",
+    title: "Desarrollador Frontend",
     company: "BPO2B",
-    description: `Diseño de infraestructuras en AWS utilizando IaC con Terraform, CI/CD, Security Hub, administración de secretos y monitoreo.`,
-    dates: "2022 - presente",
+    description: `Participé en proyectos con tecnologías como React, Next.js, Node.js, Webpack, Solidity y Vite.js. Destaco mi trabajo en Filmcoin, donde junto a mi equipo implementamos pagos con criptomonedas y desarrollé animaciones con Three.js. Mis tareas incluyeron investigación, documentación y aplicación de conocimientos, enfrentando el reto de aprender Blockchain y contratos inteligentes con Solidity y Ethereum.`,
+    dates: "2021 - 2022",
     jobs: [
-      `Diseño y administración de infraestructuras en AWS: VPC, subredes, IAM, gestión de secretos y controles de seguridad.`,
-      `Aprovisionamiento con Terraform; despliegue y operación de contenedores mediante Docker.`,
-      `Implementación y mantenimiento de pipelines CI/CD con GitHub Actions; gestión de secretos y repositorios.`,
-      `Monitoreo, respuesta a incidentes y automatización de remediaciones (Security Hub, alertas, runbooks).`,
+      `Desarrollo y mantenimiento de aplicaciones web.`,
+      `Administración de proyectos utilizando GitHub, incluyendo la gestión de ramas, pull requests y resolución de conflictos.`,
+    ],
+  },
+  {
+    title: "Practicante de Desarrollo Web",
+    company: "BPO2B",
+    description: `Brindé soporte a un sitio web desarrollado con Odoo, una plataforma de comercio electrónico que requería funcionalidades avanzadas. Esta experiencia me permitió familiarizarme con dicha tecnología. Además, aprendí React.js creando páginas para distintos clientes.`,
+    dates: "2021 - 2022",
+    jobs: [
+      `Desarrollo y mantenimiento de un sitio web en Odoo, implementando funcionalidades personalizadas para mejorar la experiencia del usuario.`,
+      `Modificación de frontend mediante CSS y JavaScript para adaptar el sitio a las necesidades del cliente.`,
     ],
   },
 ];
