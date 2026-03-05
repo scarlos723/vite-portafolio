@@ -131,11 +131,11 @@ const ExperienceCard = ({
   const scale = useTransform(progress, [start, center, end], [0.85, 1, 0.85]);
 
   // Z-index dinámico - la activa siempre arriba
-  const zIndex = useTransform(
-    progress,
-    [start, center, end],
-    [index, index + 100, index],
-  );
+  // const zIndex = useTransform(
+  //   progress,
+  //   [start, center, end],
+  //   [index, index + 100, index],
+  // );
 
   // Aplicar spring solo a transformaciones
   const springRotateX = useSpring(rotateX, { stiffness: 80, damping: 20 });
