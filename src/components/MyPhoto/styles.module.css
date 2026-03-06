@@ -1,0 +1,8 @@
+.photo-cont{
+  display: grid;
+  place-items: center;
+  height: 100dvh;
+  background-image: 
+        linear-gradient(0deg, black 0%, transparent 50%, black 100%), 
+        radial-gradient(circle at 120% -90%,  #ae8200 20%, #9a7e00 50%,  black 70%);
+}

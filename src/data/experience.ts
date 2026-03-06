@@ -37,7 +37,7 @@ export const experienceData = [
     ],
   },
   {
-    title: "Practicante de Desarrollo Web",
+    title: "Desarrollador Web Junior",
     company: "BPO2B",
     description: `Brindé soporte a un sitio web desarrollado con Odoo, una plataforma de comercio electrónico que requería funcionalidades avanzadas. Esta experiencia me permitió familiarizarme con dicha tecnología. Además, aprendí React.js creando páginas para distintos clientes.`,
     dates: "2021 - 2022",
