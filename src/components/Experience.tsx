@@ -233,7 +233,7 @@ const BackgroundTitle = (props: {
       style={{
         opacity: useTransform(progress, [start, center, end], [0, 1, 0]),
       }}
-      className="uppercase absolute z-0 top-50 lg:top-70 text-center text-white text-4xl lg:text-8xl font-extrabold"
+      className="uppercase absolute z-0 top-50 lg:top-70 text-center text-4xl lg:text-8xl font-extrabold  bg-gradient-to-r from-amber-200 to-blue-400 bg-clip-text text-transparent"
     >
       {title}
     </motion.h2>

@@ -62,8 +62,8 @@ export const Skills = () => {
   return (
     <motion.section
       className="relative h-dvh grid content-center overflow-hidden"
-      initial={{ opacity: 0, y: -200 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ y: -200 }}
+      whileInView={{ y: 0 }}
       transition={{ duration: 1 }}
     >
       <div className="absolute top-20 xl:mt-40 pointer-events-none">
