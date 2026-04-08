@@ -129,21 +129,21 @@ export const Skills = () => {
           <h2 className="text-4xl xl:text-8xl font-bold mb-8">Skills</h2>
           <div className="grid gap-2 text-sm md:text-lg xl:text-xl">
             <code className="mb-6">
-              Mi trayectoria comenzó creando sitios web en semanas con React y
-              JavaScript, pero la necesidad real del negocio me impulsó a
-              transformarme en alguien diestro en arquitecturas y servicios de
+              Mi trayectoria comenzó creando sitios web en pocas semanas con
+              React y JavaScript, pero la necesidad real del negocio me impulsó
+              a convertirme en alguien diestro en arquitecturas y servicios en
               la nube.
             </code>
             <code>
               Disfruto colaborar con equipos multidisciplinarios, compartir
-              conocimiento y construir soluciones que equilibren velocidad de
-              entrega con robustez operativa.
+              conocimiento y construir soluciones que equilibren la velocidad de
+              entrega con la robustez operativa.
             </code>
             <code>
-              Me mantengo en constante aprendizaje, pues me gusta siempre estar
-              usando herramientas y tecnologías resientes para el desarrollo.
-              Fuera del trabajo, me gusta el skateboarding, algo que ha
-              reforzado mi disciplina, constancia y enfoque en superar desafíos
+              Me mantengo en aprendizaje constante; me gusta usar herramientas y
+              tecnologías recientes para el desarrollo. Fuera del trabajo,
+              disfruto del skateboarding, una afición que ha reforzado mi
+              disciplina, constancia y capacidad para afrontar desafíos
               complejos. Estoy abierto a conectar con profesionales que valoren
               la proactividad técnica y el crecimiento mutuo.
             </code>

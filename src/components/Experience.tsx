@@ -37,7 +37,7 @@ export const Experience = () => {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-amber-200 to-blue-400 bg-clip-text text-transparent"
+          className="text-4xl md:text-5xl font-bold mb-12 bg-linear-to-r from-amber-200 to-blue-400 bg-clip-text text-transparent"
         >
           Experiencia
         </motion.h2>

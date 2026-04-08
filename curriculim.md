@@ -7,7 +7,7 @@ arquitecturas y servicios de la nube.
 Disfruto colaborar con equipos multidisciplinarios, compartir conocimiento y
 construir soluciones que equilibren velocidad de entrega con robustez
 operativa. Me mantengo en constante aprendizaje, pues me gusta siempre
-estar usando herramientas y tecnologías resientes para el desarrollo.
+estar usando herramientas y tecnologías recientes para el desarrollo.
 Fuera del trabajo, me gusta el skateboarding, algo que ha reforzado mi
 disciplina, constancia y enfoque en superar desafíos complejos. Estoy abierto a
 conectar con profesionales que valoren la proactividad
