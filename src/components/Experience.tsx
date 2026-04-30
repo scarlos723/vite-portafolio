@@ -1,6 +1,7 @@
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import { useMemo, useRef } from "react";
 import { experienceData } from "../data/experience";
+import { meData } from "../data/me";
 
 export const Experience = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -59,7 +60,7 @@ export const Experience = () => {
             transformStyle: "preserve-3d",
           }}
         >
-          {experienceData.map((exp, index) => (
+          {meData.experience.map((exp, index) => (
             <ExperienceCard
               key={exp.title}
               experience={exp}

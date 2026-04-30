@@ -22,7 +22,39 @@ import {
 } from "react-icons/si";
 import { TbBrandThreejs } from "react-icons/tb";
 import { VscMcp } from "react-icons/vsc";
-
+export interface MeData {
+  name: string;
+  title: string;
+  linkedin: string;
+  experience: {
+    title: string;
+    company: string;
+    description: string;
+    dates: string;
+    jobs: string[];
+  }[];
+  education: {
+    type: "academia" | "complementario";
+    title: string;
+    institution: string;
+    description?: string;
+    dates: string;
+    link_cert?: string;
+  }[];
+  skills: {
+    description: {
+      title: string;
+      intro: string;
+      enjoy: string;
+      personal: string;
+    };
+    tecnologies: {
+      name: string;
+      icon: React.ComponentType<{ color?: string }>;
+      color: string;
+    }[];
+  };
+}
 export const meData = {
   name: "Carlos Sanchez",
   title: `Ingeniero en Electrónica y Telecomunicaciones. DevOps | AWS

@@ -6,6 +6,7 @@ import {
   type MotionValue,
 } from "motion/react";
 import { useRef } from "react";
+import { meData } from "../data/me";
 
 /* ──────────────────────────── Data ──────────────────────────── */
 
@@ -17,70 +18,6 @@ interface EducationItem {
   dates: string;
   link_cert?: string;
 }
-
-const ALL_EDUCATION: EducationItem[] = [
-  {
-    type: "academia",
-    title: "Máster en Ingeniería de Software y Sistemas Informáticos",
-    institution: "Universidad Nacional de Colombia",
-    description:
-      "Profundizando en fundamentos de ingeniería de software con doble titulación en Inteligencia Artificial para Software y DevOps.",
-    dates: "2025 – en curso",
-  },
-  {
-    type: "academia",
-    title: "Ingeniería en Electrónica y Telecomunicaciones",
-    institution: "Universidad del Cauca",
-    description:
-      "Obtuve mi título de ingeniero en Electrónica y Telecomunicaciones con énfasis en Telemática. Adquirí conocimientos sólidos en electrónica, telecomunicaciones, programación y redes.",
-    dates: "2017 – 2022",
-  },
-  {
-    type: "complementario",
-    title: "JavaScript, React, Terraform",
-    institution: "Platzi",
-    link_cert: "https://platzi.com/p/carlossde58/",
-    dates: "2020 – 2024",
-  },
-  {
-    type: "complementario",
-    title: "Desarrollador de Smart Contracts en Solidity",
-    institution: "Blockchain Academy Chile",
-    link_cert:
-      "http://www.stamping.io/q/?50a2e772da4eefc5074c8aedbffd56e93644d882",
-    dates: "2022",
-  },
-  {
-    type: "complementario",
-    title: "Machine Learning con Python — De modelos lineales al Deep Learning",
-    institution: "Instituto Tecnológico de Massachusetts, MITx",
-    link_cert:
-      "https://courses.edx.org/certificates/8df3ffb69f1b401489fb0613b26d2b9f",
-    dates: "2020",
-  },
-  {
-    type: "complementario",
-    title: "Desarrollo Web con Python y JavaScript",
-    institution: "Universidad de Harvard, HarvardX",
-    link_cert:
-      "https://courses.edx.org/certificates/97150a4aec6146cba244943849213339",
-    dates: "2020",
-  },
-  {
-    type: "complementario",
-    title: "Introducción a la Inteligencia Artificial con Python",
-    institution: "Universidad de Harvard, HarvardX",
-    link_cert:
-      "https://courses.edx.org/certificates/97150a4aec6146cba244943849213339",
-    dates: "2020",
-  },
-  {
-    type: "complementario",
-    title: "Introducción al Framework Laravel",
-    institution: "Universidad del Cauca",
-    dates: "2019",
-  },
-];
 
 /* ──────────────────────────── Main section ──────────────────── */
 
@@ -102,7 +39,7 @@ export const Education = () => {
     <div
       ref={containerRef}
       className="relative"
-      style={{ height: `${ALL_EDUCATION.length * 70}vh` }}
+      style={{ height: `${meData.education.length * 70}vh` }}
     >
       <section className="sticky top-0 h-screen flex flex-col justify-center items-center overflow-hidden">
         {/* ── Title ── */}
@@ -117,12 +54,12 @@ export const Education = () => {
 
         {/* ── Card stack area ── */}
         <div className="relative w-85 md:w-100 h-105">
-          {ALL_EDUCATION.map((edu, i) => (
+          {meData.education.map((edu, i) => (
             <EducationCard
               key={edu.title}
               education={edu}
               index={i}
-              total={ALL_EDUCATION.length}
+              total={meData.education.length}
               progress={smoothProgress}
             />
           ))}
