@@ -22,6 +22,15 @@ import {
 } from "react-icons/si";
 import { TbBrandThreejs } from "react-icons/tb";
 import { VscMcp } from "react-icons/vsc";
+
+export interface EducationItem {
+  type: "academia" | "complementario";
+  title: string;
+  institution: string;
+  description?: string;
+  dates: string;
+  link_cert?: string;
+}
 export interface MeData {
   name: string;
   title: string;
@@ -33,14 +42,7 @@ export interface MeData {
     dates: string;
     jobs: string[];
   }[];
-  education: {
-    type: "academia" | "complementario";
-    title: string;
-    institution: string;
-    description?: string;
-    dates: string;
-    link_cert?: string;
-  }[];
+  education: EducationItem[];
   skills: {
     description: {
       title: string;
@@ -172,7 +174,7 @@ export const meData = {
       institution: "Universidad del Cauca",
       dates: "2019",
     },
-  ],
+  ] satisfies EducationItem[],
   skills: {
     description: {
       title: "Skills",

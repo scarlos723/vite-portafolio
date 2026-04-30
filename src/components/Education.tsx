@@ -6,18 +6,9 @@ import {
   type MotionValue,
 } from "motion/react";
 import { useRef } from "react";
-import { meData } from "../data/me";
+import { meData, type EducationItem } from "../data/me";
 
 /* ──────────────────────────── Data ──────────────────────────── */
-
-interface EducationItem {
-  type: "academia" | "complementario";
-  title: string;
-  institution: string;
-  description?: string;
-  dates: string;
-  link_cert?: string;
-}
 
 /* ──────────────────────────── Main section ──────────────────── */
 
