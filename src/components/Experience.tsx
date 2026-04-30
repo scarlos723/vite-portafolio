@@ -1,6 +1,6 @@
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import { useMemo, useRef } from "react";
-import { experienceData } from "../data/experience";
+
 import { meData } from "../data/me";
 
 export const Experience = () => {
@@ -19,7 +19,10 @@ export const Experience = () => {
   });
 
   // Altura dinámica basada en cantidad de experiencias
-  const sectionHeight = useMemo(() => `${experienceData.length * 100}vh`, []);
+  const sectionHeight = useMemo(
+    () => `${meData.experience.length * 100}vh`,
+    [],
+  );
 
   return (
     <div
@@ -42,12 +45,12 @@ export const Experience = () => {
         >
           Experiencia
         </motion.h2>
-        {experienceData.map((exp, i) => (
+        {meData.experience.map((exp, i) => (
           <BackgroundTitle
             key={i}
             title={exp.title}
             index={i}
-            total={experienceData.length}
+            total={meData.experience.length}
             progress={smoothProgress}
           />
         ))}
@@ -65,7 +68,7 @@ export const Experience = () => {
               key={exp.title}
               experience={exp}
               index={index}
-              total={experienceData.length}
+              total={meData.experience.length}
               progress={smoothProgress}
             />
           ))}
