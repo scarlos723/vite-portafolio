@@ -60,7 +60,7 @@ export const Banner = () => {
           className="text-center z-2 mt-24 lg:mt-0 xl:mt-50 sticky top-20 mx-auto px-4"
         >
           <h1 className="text-4xl  xl:text-6xl  font-bold">{meData.name}</h1>
-          <p className="transition mt-1 text-xl xl:text-2xl ">{meData.title}</p>
+          <p className="transition mt-1 text-xl xl:text-2xl md:w-120 mx-auto">{meData.title}</p>
           <a
             className="flex items-center transition justify-center mt-4 xl:mt-10 cursor-pointer hover:scale-125"
             href="#"
